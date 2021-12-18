@@ -33,7 +33,7 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 				affichageFile(&pDebutFile);
 			}
 
-			majStation(&pDebutFile, &pDebutStation, &xn, a, c, m, couts[iCouts]);
+			majStation(&pDebutFile, &pDebutStation, &xn, a, c, m, couts[iCouts] );
 
 			majFile(&pDebutFile);
 
