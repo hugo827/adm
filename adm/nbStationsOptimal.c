@@ -9,7 +9,7 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 
 	Couts couts[NBCOUTS]; // a changer NBCOUTS a chaque modifie de nbStationMin et nbStationsMAX
 
-	initCout(couts, NBCOUTS);
+	initCouts(couts, NBCOUTS);
 
 	while (nbStations < nbStationsMax) {
 		

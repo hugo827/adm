@@ -1,2 +1,4 @@
-﻿  main.c
-  adm.vcxproj -> C:\Users\Me\source\repos\adm\Debug\adm.exe
+﻿calculCoutsClientAFinis.obj : error LNK2019: unresolved external symbol _calculCoutsEnFonctionTemps referenced in function _calculCoutsClientAFinis
+calculCoutsStationInnocupée.obj : error LNK2019: unresolved external symbol _calculCoutEnFonctionTemps referenced in function _calculCoutsStationInoccupée
+nbStationsOptimal.obj : error LNK2019: unresolved external symbol _générerArrivéers referenced in function _nbStationsOptimal
+C:\Users\Me\source\repos\adm\Debug\adm.exe : fatal error LNK1120: 3 unresolved externals

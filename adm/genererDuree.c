@@ -4,9 +4,9 @@
 int genererDuree(int* xn, int a,int c, int m) {
 	int durée;
 
-	*xn = nombreAléatoire(m, a, c, *xn);
+	(*xn) = nombreAléatoire(m, a, c, *xn);
 
-	double u1 = *xn / m;
+	double u1 = (*xn) / m;
 	
 
 	if (u1 < 0.38) //r=24

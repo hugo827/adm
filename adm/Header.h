@@ -64,3 +64,25 @@ void affichageFile(Client* pDebutFile);
 void affichageFileEtStations(Station* pDebutStations, Client* pDebutFile);
 
 int rechercheMin(int nbStationsMin, int nbStations, Couts couts[]);
+
+Station* initStations(int nbStation);
+
+void majFile(Client* pDebutClient);
+
+void majStation(Station* pDebutStation, Client* pDebutFile, int* xn, int a, int c, int m, Couts couts); 
+
+Couts libérerClientStation(Station* pStation, Couts couts);
+
+int genererArrivees(int a, int c, int m, int xn, Client* pDebutFile);
+
+int arriveePrioritaire(int paramPrior, int a, int c, int m, int* xn);
+
+int arriveeOrdinaire(int paramOrd, int a, int c, int m, int* xn);
+
+Client* ajouterClientFile(char statut, Client* pDebutFile);
+
+Couts clientImpatientPart(Couts couts, Client* pDebutFile);
+
+Client* retirerClientFile(Client* pDebutFile, Client* pClientImpatient, Client* pPrecClient);
+
+Couts coutDepartClientImpatient(Client* pFile, Couts couts);

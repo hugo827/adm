@@ -22,7 +22,32 @@
     <ClInclude Include="Header.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="affichageCouts.c" />
+    <ClCompile Include="affichageFile.c" />
+    <ClCompile Include="affichageFileEtStations.c" />
+    <ClCompile Include="affichageStations.c" />
+    <ClCompile Include="ajoutClientFile.c" />
+    <ClCompile Include="arriveeOrdinaire.c" />
+    <ClCompile Include="arriveePrioritaire.c" />
+    <ClCompile Include="calculCoutsClientAFinis.c" />
+    <ClCompile Include="calculCoutsStationInnocupée.c" />
+    <ClCompile Include="calculEnFonctionTemps.c" />
+    <ClCompile Include="clientImpartientPart.c" />
+    <ClCompile Include="coutDepartClientImpatient.c" />
+    <ClCompile Include="genererArrivees.c" />
+    <ClCompile Include="genererDuree.c" />
+    <ClCompile Include="initCouts.c" />
+    <ClCompile Include="initStations.c" />
+    <ClCompile Include="libérerClientStation.c" />
+    <ClCompile Include="loiPoisson.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="majFile.c" />
+    <ClCompile Include="majStations.c" />
+    <ClCompile Include="nbStationsOptimal.c" />
+    <ClCompile Include="nombreAléatoire.c" />
+    <ClCompile Include="rechercheCoutsParHeure.c" />
+    <ClCompile Include="rechercheMin.c" />
+    <ClCompile Include="retirerClientFile.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

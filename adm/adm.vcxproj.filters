@@ -19,6 +19,15 @@
     <Filter Include="Source Files\display">
       <UniqueIdentifier>{b499f127-e0da-4797-bfcf-83762b194c1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\generation">
+      <UniqueIdentifier>{49d1bc25-cb68-4c0f-912a-04e24ea2e41c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\calculate">
+      <UniqueIdentifier>{db488e75-2a4d-48ae-bf58-0fde99aa8f20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\update">
+      <UniqueIdentifier>{307a4cd3-0393-4e22-b429-af2a3cee956d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">
@@ -28,6 +37,81 @@
   <ItemGroup>
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nbStationsOptimal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="initCouts.c">
+      <Filter>Source Files\init</Filter>
+    </ClCompile>
+    <ClCompile Include="affichageCouts.c">
+      <Filter>Source Files\display</Filter>
+    </ClCompile>
+    <ClCompile Include="calculCoutsStationInnocupée.c">
+      <Filter>Source Files\calculate</Filter>
+    </ClCompile>
+    <ClCompile Include="calculCoutsClientAFinis.c">
+      <Filter>Source Files\calculate</Filter>
+    </ClCompile>
+    <ClCompile Include="rechercheCoutsParHeure.c">
+      <Filter>Source Files\calculate</Filter>
+    </ClCompile>
+    <ClCompile Include="calculEnFonctionTemps.c">
+      <Filter>Source Files\calculate</Filter>
+    </ClCompile>
+    <ClCompile Include="genererDuree.c">
+      <Filter>Source Files\generation</Filter>
+    </ClCompile>
+    <ClCompile Include="nombreAléatoire.c">
+      <Filter>Source Files\generation</Filter>
+    </ClCompile>
+    <ClCompile Include="loiPoisson.c">
+      <Filter>Source Files\generation</Filter>
+    </ClCompile>
+    <ClCompile Include="affichageStations.c">
+      <Filter>Source Files\display</Filter>
+    </ClCompile>
+    <ClCompile Include="affichageFile.c">
+      <Filter>Source Files\display</Filter>
+    </ClCompile>
+    <ClCompile Include="affichageFileEtStations.c">
+      <Filter>Source Files\display</Filter>
+    </ClCompile>
+    <ClCompile Include="rechercheMin.c">
+      <Filter>Source Files\calculate</Filter>
+    </ClCompile>
+    <ClCompile Include="initStations.c">
+      <Filter>Source Files\init</Filter>
+    </ClCompile>
+    <ClCompile Include="majFile.c">
+      <Filter>Source Files\update</Filter>
+    </ClCompile>
+    <ClCompile Include="majStations.c">
+      <Filter>Source Files\update</Filter>
+    </ClCompile>
+    <ClCompile Include="libérerClientStation.c">
+      <Filter>Source Files\update</Filter>
+    </ClCompile>
+    <ClCompile Include="genererArrivees.c">
+      <Filter>Source Files\generation</Filter>
+    </ClCompile>
+    <ClCompile Include="arriveePrioritaire.c">
+      <Filter>Source Files\generation</Filter>
+    </ClCompile>
+    <ClCompile Include="arriveeOrdinaire.c">
+      <Filter>Source Files\generation</Filter>
+    </ClCompile>
+    <ClCompile Include="ajoutClientFile.c">
+      <Filter>Source Files\update</Filter>
+    </ClCompile>
+    <ClCompile Include="clientImpartientPart.c">
+      <Filter>Source Files\update</Filter>
+    </ClCompile>
+    <ClCompile Include="retirerClientFile.c">
+      <Filter>Source Files\update</Filter>
+    </ClCompile>
+    <ClCompile Include="coutDepartClientImpatient.c">
+      <Filter>Source Files\calculate</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

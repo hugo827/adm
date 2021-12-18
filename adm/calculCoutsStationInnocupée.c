@@ -3,7 +3,7 @@
 
 
 int calculCoutsStationInoccupée(Station* pDebutStation) {
-	int couts, coutsParHeure = 18;
+	int couts = 0, coutsParHeure = 18;
 
 	Station* pStation = &pDebutStation;
 	while (pStation != NULL) {

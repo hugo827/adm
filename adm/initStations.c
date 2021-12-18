@@ -7,7 +7,7 @@ Station* initStations(int nbStation) {
 	bool continuer = true;
 
 	while (iStation < nbStation && continuer) {
-		Station* pNouv = malloc(sizeof(Station));
+		Station* pNouv = (Station*) malloc(sizeof(Station));
 		continuer = pNouv != NULL; 
 		if (continuer) {
 			pNouv->pClient = NULL;
