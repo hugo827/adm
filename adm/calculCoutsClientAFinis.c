@@ -11,11 +11,13 @@ Couts calculCoutsClientAFinis(Couts couts, Client* pPart) {
 
 	int coutsTemps = calculEnFonctionTemps(coutsParHeureSystem, pPart->tempsPasseSystem);
 
-	(status == 'O') ? (couts.coutsSystemOrdinaire += coutsTemps) : (couts.coutsSystemPrioritaire += coutsTemps);
+	if (status == 'O')  (couts.coutsSystemOrdinaire += coutsTemps); 
+	else (couts.coutsSystemPrioritaire += coutsTemps);
 	
-	coutsTemps = calculCoutsEnFonctionTemps(coutsParHeureStation, pPart->tempsRestantStation);  // probléme tempsRestantStation = pas celui passé ! ?
+	coutsTemps = calculEnFonctionTemps(coutsParHeureStation, pPart->tempsRestantStation);  // probléme tempsRestantStation = pas celui passé ! ?
 
-	(status == 'O') ? (couts.coutsStationOrdinaire += coutsTemps) : (couts.coutsStationsPrioritaire += coutsTemps);
+	if (status == 'O') (couts.coutsStationOrdinaire += coutsTemps);
+	else (couts.coutsStationsPrioritaire += coutsTemps);
 	
 	return couts;
 }

@@ -13,9 +13,9 @@ void main(void) {
 	int nbStationsMax = 5;
 	int tempsSimul = 500;
 
-	//nbStationsOptimal(nbStationsMin, nbStationsMax, tempsSimul, a, c, m, x0);
+	int nb = nbStationsOptimal(nbStationsMin, nbStationsMax, tempsSimul, a, c, m, x0);
 
-	a == c ? printf("ok") : printf("non");
+	printf("\n => Le nombre de stations optimal est : %d", nb);
 
 	printf("<--------------------Fin du programme-------------------->");
 

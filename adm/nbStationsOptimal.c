@@ -27,7 +27,7 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 				affichageStations(&pDebutStation);
 			}
 
-			générerArrivéers(a, c, m, &xn);
+			xn = genererArrivees(a, c, m, xn, &pDebutFile);
 
 			if (temps <= 20 && nbStations == nbStationsMin) {
 				affichageFile(&pDebutFile);

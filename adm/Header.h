@@ -7,6 +7,7 @@
 typedef struct client Client;
 typedef struct station Station;
 typedef struct couts Couts;
+typedef struct change Change;
 
 
 struct client {
@@ -36,6 +37,12 @@ struct couts {
 	int coutsTotal;
 };
 
+struct change {
+	Change* pPrec;
+	Station* pStation;
+	Change* pSuivChange;
+};
+
 #define NBCOUTS 5
 #define EXIT_FAILURE 1
 #define EXIT_SUCCES 0
@@ -48,6 +55,8 @@ void initCouts(Couts couts[], int length);
 void affichageCouts(int nbStationsMin, int nbStationsMax, Couts couts[]);
 
 int calculCoutsStationInoccupée(Station* pDebutStation);
+
+int calculEnFonctionTemps(int coutsParHeure, int temps);
 
 Couts calculCoutsClientAFinis(Couts couts, Client* pPart);
 
@@ -86,3 +95,5 @@ Couts clientImpatientPart(Couts couts, Client* pDebutFile);
 Client* retirerClientFile(Client* pDebutFile, Client* pClientImpatient, Client* pPrecClient);
 
 Couts coutDepartClientImpatient(Client* pFile, Couts couts);
+
+void rechercheCoutsParHeure(char status, int* coutsParHeureSystem, int* coutsParHeureStation);
