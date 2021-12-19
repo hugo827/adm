@@ -1,2 +1,22 @@
 ﻿  affichageStations.c
+  nbStationsOptimal.c
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(30,49): warning C4047: 'function': 'Client *' differs in levels of indirection from 'Client **'
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(30,38): warning C4024: 'genererArrivees': different types for formal and actual parameter 5
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(33,30): warning C4047: 'function': 'Client *' differs in levels of indirection from 'Client **'
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(33,19): warning C4024: 'affichageFile': different types for formal and actual parameter 1
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(36,26): warning C4047: 'function': 'Station *' differs in levels of indirection from 'Client **'
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(36,15): warning C4024: 'majStation': different types for formal and actual parameter 1
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(36,42): warning C4047: 'function': 'Client *' differs in levels of indirection from 'Station **'
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(36,28): warning C4024: 'majStation': different types for formal and actual parameter 2
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(38,23): warning C4047: 'function': 'Client *' differs in levels of indirection from 'Client **'
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(38,12): warning C4024: 'majFile': different types for formal and actual parameter 1
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(41,54): warning C4047: 'function': 'Client *' differs in levels of indirection from 'Station **'
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(41,40): warning C4024: 'clientImpatientPart': different types for formal and actual parameter 2
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(45,40): warning C4047: 'function': 'Station *' differs in levels of indirection from 'Client **'
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(45,29): warning C4024: 'affichageFileEtStations': different types for formal and actual parameter 1
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(45,56): warning C4047: 'function': 'Client *' differs in levels of indirection from 'Station **'
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(45,42): warning C4024: 'affichageFileEtStations': different types for formal and actual parameter 2
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(52,86): warning C4047: 'function': 'Station *' differs in levels of indirection from 'Station **'
+C:\Users\Me\source\repos\adm\adm\nbStationsOptimal.c(52,72): warning C4024: 'calculCoutsStationInoccupée': different types for formal and actual parameter 1
+  Generating Code...
   adm.vcxproj -> C:\Users\Me\source\repos\adm\Debug\adm.exe

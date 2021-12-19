@@ -16,7 +16,7 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 		int xn = x0;
 		int iCouts = nbStations - nbStationsMin;
 		Client* pDebutFile = NULL;
-
+		
 
 		Station* pDebutStation = initStations(nbStations);
 
@@ -24,7 +24,7 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 		while (temps <= tempsSimul) {
 
 			if (temps <= 20 && nbStations == nbStationsMin) {
-				affichageStations(&pDebutStation);
+				affichageStations(pDebutStation);
 			}
 
 			xn = genererArrivees(a, c, m, xn, &pDebutFile);

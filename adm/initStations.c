@@ -10,24 +10,23 @@ Station* initStations(int nbStation) {
 		Station* pNouv = (Station*) malloc(sizeof(Station));
 		continuer = pNouv != NULL; 
 		if (continuer) {
+			pNouv->pSuivStation = NULL;
 			pNouv->pClient = NULL;
 			pNouv->tempsInoccupée = 0;
+
 			if (pDebutStations == NULL) {
-				pDebutStations = pNouv;
+				pDebutStations = pNouv;	
 			}
 			else {
 				pPrec->pSuivStation = pNouv;
 			}
 			pPrec = pNouv;
-			pNouv->pSuivStation = NULL;
 		}
 		else {
-			printf("Plus d'espace mémoire -> création Station !");
+			printf("\nPlus d'espace mémoire -> création Station !");
 			exit(EXIT_FAILURE);
 		}
 		iStation++;
 	}
-
-
 	return pDebutStations;
 }
