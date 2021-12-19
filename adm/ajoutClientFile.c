@@ -4,7 +4,7 @@ Client* ajouterClientFile(char statut, Client* pDebutFile) {
 
 	Client* pNouv = (Client*)malloc(sizeof(Client));
 	if (pNouv == NULL) {
-		printf("Plus d'espaces mémoire -> partie ajouterClientFile");
+		printf("Plus d'espaces mÃ©moire -> partie ajouterClientFile");
 		exit(EXIT_FAILURE);
 	}
 	else {
@@ -12,6 +12,8 @@ Client* ajouterClientFile(char statut, Client* pDebutFile) {
 		pNouv->statut = statut;
 		pNouv->pSuivClient = NULL;
 		Client* pPrecClient = NULL;
+		pNouv->tempsPasseFile = 0;
+		pNouv->tempsPasseSystem = 0;
 		switch (statut) {
 		case 'O' :
 			while (pFile != NULL) {
