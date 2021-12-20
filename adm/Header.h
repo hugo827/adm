@@ -70,7 +70,7 @@ void affichageStations(Station* pDebutStations);
 
 void affichageFile(Client** pDebutFile);
 
-void affichageFileEtStations(Station* pDebutStations, Client* pDebutFile);
+void affichageFileEtStations(Station** pDebutStations, Client** pDebutFile);
 
 int rechercheMin(int nbStationsMin, int nbStationsMax, Couts couts[]);
 

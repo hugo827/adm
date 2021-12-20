@@ -75,7 +75,7 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 		// a voir 
 		pClient = pModification->pStation->pClient;
 		pClient->statut = 'A';
-		Client* pFile = pDebutFile;
+		Client* pFile = *pDebutFile;
 		Client* pPrec = NULL;
 
 		while (pFile != NULL && pFile->statut == 'A') {
@@ -83,19 +83,19 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 			pFile = pFile->pSuivClient;
 		}
 
-		if (pFile == pDebutFile) {
-			pClient->pSuivClient = pDebutFile;
-			pDebutFile = pClient;
+		if (pFile == *pDebutFile) {
+			pClient->pSuivClient = *pDebutFile;
+			*pDebutFile = pClient;
 		}
 		else {
 			pPrec->pSuivClient = pClient;
 			pClient->pSuivClient = pFile;
 		}
 
-		pModification->pStation->pClient = pDebutFile;
-		pDebutFile = (*pDebutFile)->pSuivClient;
+		pModification->pStation->pClient = *pDebutFile;
+		*pDebutFile = (*pDebutFile)->pSuivClient;
 
-		if (pModification->pStation->pClient == -1) {
+		if (pModification->pStation->pClient->tempsRestantStation == -1) {
 			int duree = genererDuree(&xn, a, c, m);
 			pModification->pStation->pClient->tempsRestantStation = duree;
 		}

@@ -23,4 +23,7 @@ void affichageStations(Station* pDebutStations) {
 		pStation = pStation->pSuivStation;
 		i++;
 	}
+	if (pStation == NULL) {
+		printf("Pas de station\n");
+	}
 }
