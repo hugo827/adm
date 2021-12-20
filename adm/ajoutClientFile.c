@@ -20,14 +20,15 @@ Client* ajouterClientFile(char statut, Client* pDebutFile) {
 				pPrecClient = pFile;
 				pFile = pFile->pSuivClient;
 			}
-			
+			//il n'y a personne dans la file
 			if (pFile == pDebutFile) {
-				pNouv->pSuivClient = pDebutFile;
 				pDebutFile = pNouv;
+				pNouv->pSuivClient = NULL;
 			}
+			// le client ira en bout de file car il est ordinaire
 			else {
 				pPrecClient->pSuivClient = pNouv;
-				pNouv->pSuivClient = pFile;
+				pNouv->pSuivClient = NULL;
 			}
 			break;
 		case 'A':
