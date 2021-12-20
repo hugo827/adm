@@ -16,7 +16,7 @@ int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile) {
 			// ressortir nbr aleatoire pour definir si prior absolue (30%) ou relatif
 			xn = nombreAleatoire(m, a, c, xn);
 			char statut;
-			double U1 = xn / m;
+			double U1 =  ((double)xn / (double)m);
 			if (U1 < 0.3) {
 				statut = 'A';
 				nbArriveesAbsolue++;

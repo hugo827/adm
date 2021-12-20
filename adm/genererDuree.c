@@ -5,7 +5,7 @@ int genererDuree(int* xn, int a,int c, int m) {
 	int duree;
 	 *xn = nombreAleatoire(m, a, c, *xn);
 
-	double u1 = (double) (*xn) / m;
+	double u1 = ((double)(*xn) /(double)m);
 	
 
 	if (u1 < 0.38) //r=24

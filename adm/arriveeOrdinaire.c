@@ -7,7 +7,7 @@ int arriveeOrdinaire(double paramOrd, int a, int c, int m, int* xn) {
 
 	(*xn) = nombreAleatoire(a, c, m, *xn);
 	
-	double U1 = (*xn) / m;
+	double U1 = ((double)(*xn) / (double)m);
 
 	
 	//calculer les proba pour chaque nbr d'arrivées

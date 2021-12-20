@@ -5,7 +5,7 @@ int arriveePrioritaire(double paramPrior, int a, int c, int m, int* xn) {
 
 	(*xn) = nombreAleatoire(a, c, m, (*xn));
 
-	double U1 = (*xn) / m;
+	double U1 = ((double)(*xn) / (double)m);
 
 	int nbArrivéesP= 0;
 
