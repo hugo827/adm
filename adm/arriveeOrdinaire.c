@@ -4,10 +4,13 @@
 int arriveeOrdinaire(double paramOrd, int a, int c, int m, int* xn) {
 
 	int nbArriveesO = 0;
+	int xTemps = *xn;
 
-	(*xn) = nombreAleatoire(a, c, m, *xn);
+	xTemps = nombreAleatoire(a, c, m, *xn);
 	
-	double U1 = ((double)(*xn) / (double)m);
+
+	double U1 = ((double)(xTemps) / (double)m);
+	*xn = xTemps;
 
 	
 	//calculer les proba pour chaque nbr d'arrivées

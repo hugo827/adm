@@ -2,10 +2,14 @@
 
 
 int arriveePrioritaire(double paramPrior, int a, int c, int m, int* xn) {
+	
+	int xTemps = *xn;
 
-	(*xn) = nombreAleatoire(a, c, m, (*xn));
+	int temp = nombreAleatoire(a, c, m, xTemps);
 
-	double U1 = ((double)(*xn) / (double)m);
+	
+	*xn = temp;
+	double U1 = ((double)(temp) / (double)m);
 
 	int nbArrivéesP= 0;
 

@@ -23,15 +23,15 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 		int temps = 1;
 		while (temps <= tempsSimul) {
 
-			if (temps <= 20 && nbStations == nbStationsMin) {
+			/*if (temps <= 20 && nbStations == nbStationsMin) {
 				affichageStations(pDebutStation);
-			}
-
+			}*/
+			
 			xn = genererArrivees(a, c, m, xn, &pDebutFile);
 
-			if (temps <= 20 && nbStations == nbStationsMin) {
+			/*if (temps <= 20 && nbStations == nbStationsMin) {
 				affichageFile(&pDebutFile);
-			}
+			}*/
 
 			xn = majStation(pDebutStation, &pDebutFile, xn, a, c, m, couts[iCouts] );
 
@@ -41,9 +41,9 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 				couts[iCouts] = clientImpatientPart(couts[iCouts], &pDebutFile);
 			}
 
-			if (temps <= 20 && nbStations == nbStationsMin) {
+			/*if (temps <= 20 && nbStations == nbStationsMin) {
 				affichageFileEtStations(pDebutFile, pDebutStation);
-			}
+			}*/
 
 
 			temps++;

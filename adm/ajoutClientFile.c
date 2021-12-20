@@ -8,9 +8,9 @@ Client* ajouterClientFile(char statut, Client** pDebutFile) {
 		exit(EXIT_FAILURE);
 	}
 	else {
-		printf("Ajout client file %p\n", pDebutFile);
+		
 		Client* pFile = *pDebutFile;
-		printf("pfile %p\n", pFile);
+		
 		pNouv->statut = statut;
 		pNouv->pSuivClient = NULL;
 		Client* pPrecClient = NULL;

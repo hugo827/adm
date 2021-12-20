@@ -1,7 +1,4 @@
-﻿  arriveeOrdinaire.c
-  arriveePrioritaire.c
-  genererArrivees.c
-  genererDuree.c
+﻿  ajoutClientFile.c
   nombreAléatoire.c
   Generating Code...
   adm.vcxproj -> D:\github\adm\x64\Debug\adm.exe

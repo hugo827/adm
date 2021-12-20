@@ -4,11 +4,8 @@
 void main(void) {
 	
 	printf("<--------------------Debut du programme-------------------->");
+	int m = 63, a = 22, c = 4, x0 = 19;
 
-	int a = 9;
-	int c = 17;
-	int m = 100;
-	int x0 = 30;
 	int nbStationsMin = 2;
 	int nbStationsMax = 5;
 	int tempsSimul = 500;

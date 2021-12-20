@@ -2,7 +2,7 @@
 
 
 int nombreAleatoire(int m, int a, int c, int xn) {
-	xn = (((a * xn) + c) % m);
-	printf("\nXN -> %d\n", xn);
-	return xn;
+	int temp = (((a * xn) + c) % m);
+	//printf("XN -> %d\n", temp);
+	return temp;
 }
