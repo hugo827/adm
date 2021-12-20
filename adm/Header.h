@@ -21,7 +21,7 @@ struct client {
 
 struct station {
 	Client* pClient;
-	int tempsInoccupée;
+	int tempsInoccupee;
 	Station* pSuivStation;
 };
 
@@ -33,7 +33,7 @@ struct couts {
 	int coutsSystemPrioritaire;
 	int coutsStationOrdinaire;
 	int coutsStationsPrioritaire;
-	int coutsStationsInoccupée;
+	int coutsStationsInoccupee;
 	int coutsTotal;
 };
 

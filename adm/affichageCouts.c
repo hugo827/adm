@@ -15,7 +15,7 @@ void affichageCouts(int nbStationsMin, int nbStationsMax, Couts couts[]) {
 			+ couts[iCouts].coutsSystemPrioritaire
 			+ couts[iCouts].coutsStationOrdinaire
 			+ couts[iCouts].coutsStationsPrioritaire
-			+ couts[iCouts].coutsStationsInoccupée
+			+ couts[iCouts].coutsStationsInoccupee
 			);
 
 
@@ -30,7 +30,7 @@ void affichageCouts(int nbStationsMin, int nbStationsMax, Couts couts[]) {
 				"\n\t - Station inoccupée : %d"
 				"\n\t => Couts Total : %d\n"
 			"", (nbStationsMin + iCouts), couts[iCouts].coutsDepartsOrdinaire, couts[iCouts].coutsDepartsPrioritaire, couts[iCouts].coutsStationOrdinaire,
-			couts[iCouts].coutsStationsPrioritaire, couts[iCouts].coutsSystemOrdinaire, couts[iCouts].coutsSystemPrioritaire, couts[iCouts].coutsStationsInoccupée, couts[iCouts].coutsTotal);
+			couts[iCouts].coutsStationsPrioritaire, couts[iCouts].coutsSystemOrdinaire, couts[iCouts].coutsSystemPrioritaire, couts[iCouts].coutsStationsInoccupee, couts[iCouts].coutsTotal);
 	}
 	
 }

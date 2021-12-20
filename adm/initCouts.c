@@ -10,7 +10,7 @@ void initCouts(Couts couts[], int length) {
 		couts[i].coutsStationsPrioritaire = 0;
 		couts[i].coutsSystemOrdinaire = 0;
 		couts[i].coutsSystemPrioritaire = 0;
-		couts[i].coutsStationsInoccupée = 0;
+		couts[i].coutsStationsInoccupee = 0;
 		couts[i].coutsTotal = 0;
 	}
 	

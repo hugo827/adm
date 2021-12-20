@@ -49,7 +49,7 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 			temps++;
 		}
 
-		couts[iCouts].coutsStationsInoccupée = calculCoutsStationInoccupée(&pDebutStation);
+		couts[iCouts].coutsStationsInoccupee = calculCoutsStationInoccupée(&pDebutStation);
 
 		nbStations++;
 	}

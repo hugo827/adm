@@ -13,7 +13,7 @@ void majStation(Station* pDebutStation, Client* pDebutFile, int* xn, int a, int 
 			pStation->pClient->tempsRestantStation--;
 		}
 		else {
-			pStation->tempsInoccupée++;
+			pStation->tempsInoccupee++;
 		}
 
 

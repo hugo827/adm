@@ -18,7 +18,7 @@ void affichageStations(Station* pDebutStations) {
 				);
 		}
 		//a afficher que la station soit inoccupée ou pas
-		printf("Temps Station inoccupee : %d\n", pStation->tempsInoccupée);
+		printf("Temps Station inoccupee : %d\n", pStation->tempsInoccupee);
 		
 		// passe à la station suivante
 		pStation = pStation->pSuivStation;
