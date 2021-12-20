@@ -2,28 +2,28 @@
 
 
 int genererDuree(int* xn, int a,int c, int m) {
-	int durée;
+	int durÃ©e;
 
-	(*xn) = nombreAléatoire(m, a, c, *xn);
+	(*xn) = nombreAlÃ©atoire(m, a, c, *xn);
 
-	double u1 = (*xn) / m;
+	double u1 = (double) (*xn) / m;
 	
 
 	if (u1 < 0.38) //r=24
-		durée = 1;
+		durÃ©e = 1;
 	else {
-		if (u1 < 0.67) durée = 2; //r=18
+		if (u1 < 0.67) durÃ©e = 2; //r=18
 		else {
-			if (u1 < 0.85) durée = 3; //r=11
+			if (u1 < 0.85) durÃ©e = 3; //r=11
 			else {
-				if (u1 < 0.92) durée = 4;
+				if (u1 < 0.92) durÃ©e = 4;
 				else {
-					if (u1 < 0.97) durée = 5;
-					else durée = 6;
+					if (u1 < 0.97) durÃ©e = 5;
+					else durÃ©e = 6;
 				}
 			}
 		}
 	}
 
-	return durée;	
+	return durÃ©e;	
 }
