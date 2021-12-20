@@ -5,13 +5,13 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 
 	int nbStations = nbStationsMin;
 
-	int nbCouts = nbStationsMax - nbStationsMin + 1;
+	int nbCouts = nbStationsMax - nbStationsMin+1;
 
 	Couts couts[NBCOUTS]; // a changer NBCOUTS a chaque modifie de nbStationMin et nbStationsMAX
 
 	initCouts(couts, NBCOUTS);
 
-	while (nbStations < nbStationsMax) {
+	while (nbStations <= nbStationsMax) {
 		
 		int xn = x0;
 		int iCouts = nbStations - nbStationsMin;
@@ -32,24 +32,24 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 			if (temps <= 20 && nbStations == nbStationsMin) {
 				affichageFile(&pDebutFile);
 			}
-			printf("%p", pDebutStation);
-			majStation(pDebutStation, &pDebutFile, &xn, a, c, m, couts[iCouts] );
 
-			majFile(&pDebutFile);
+			xn = majStation(pDebutStation, &pDebutFile, xn, a, c, m, couts[iCouts] );
+
+			majFile(pDebutFile);
 
 			if (temps > 10) {
-				clientImpatientPart(couts[iCouts], &pDebutStation);
+				couts[iCouts] = clientImpatientPart(couts[iCouts], &pDebutFile);
 			}
 
 			if (temps <= 20 && nbStations == nbStationsMin) {
-				affichageFileEtStations(&pDebutFile, &pDebutStation);
+				affichageFileEtStations(pDebutFile, pDebutStation);
 			}
 
 
 			temps++;
 		}
 
-		couts[iCouts].coutsStationsInoccupee = calculCoutsStationInoccupée(&pDebutStation);
+		couts[iCouts].coutsStationsInoccupee = calculCoutsStationInoccupée(pDebutStation);
 
 		nbStations++;
 	}
@@ -57,5 +57,5 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 
 	affichageCouts(nbStationsMin, nbStations, couts);
 
-	return rechercheMin(nbStationsMin, nbStations, couts);
+	return rechercheMin(nbStationsMin, nbStationsMax, couts);
 }

@@ -1,12 +1,11 @@
 #include "Header.h"
 
 
-void majStation(Station* pDebutStation, Client* pDebutFile, int* xn, int a, int c, int m, Couts couts) {
+int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c, int m, Couts couts) {
 
 	Station* pStation = pDebutStation;
 	Change* pDebutChangement = NULL; 
 	Change* pChange = pDebutChangement;
-	printf("\n%p\n",pDebutStation);
 
 	while (pStation != NULL) {
 		if (pStation->pClient != NULL) {
@@ -24,9 +23,9 @@ void majStation(Station* pDebutStation, Client* pDebutFile, int* xn, int a, int 
 		// si il y a un client dispo dans la file->il se met à la station
 		if (pStation->pClient == NULL) {
 
-			if (pDebutFile != NULL) {
-				pStation->pClient = pDebutFile;
-				pDebutFile = pDebutFile->pSuivClient;
+			if (*pDebutFile != NULL) {
+				pStation->pClient = *pDebutFile;
+				*pDebutFile = pStation->pClient->pSuivClient;
 				if (pStation->pClient->tempsRestantStation == -1) {
 					int duree = genererDuree(&xn, a, c, m);
 					pStation->pClient->tempsRestantStation = duree;
@@ -50,14 +49,13 @@ void majStation(Station* pDebutStation, Client* pDebutFile, int* xn, int a, int 
 					}
 				}
 			}
-
-			pStation = pStation->pSuivStation;
 		}
+		pStation = pStation->pSuivStation;
 	}
 	
 	
 	// !!! boucle pour remplacer les ordinaires par des absolus
-	while (pDebutFile != NULL && pDebutFile->statut != 'O' && pDebutChangement != NULL) {
+	while (*pDebutFile != NULL && (*pDebutFile)->statut != 'O' && pDebutChangement != NULL) {
 
 		pChange = pDebutChangement;
 		int tempsRestantMax = 0;
@@ -95,7 +93,7 @@ void majStation(Station* pDebutStation, Client* pDebutFile, int* xn, int a, int 
 		}
 
 		pModification->pStation->pClient = pDebutFile;
-		pDebutFile = pDebutFile->pSuivClient;
+		pDebutFile = (*pDebutFile)->pSuivClient;
 
 		if (pModification->pStation->pClient == -1) {
 			int duree = genererDuree(&xn, a, c, m);
@@ -116,4 +114,6 @@ void majStation(Station* pDebutStation, Client* pDebutFile, int* xn, int a, int 
 		}
 		free(pModification);	
 	}
+
+	return xn;
 }

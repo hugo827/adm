@@ -5,7 +5,7 @@
 int calculCoutsStationInoccupée(Station* pDebutStation) {
 	int couts = 0, coutsParHeure = 18;
 
-	Station* pStation = &pDebutStation;
+	Station* pStation = pDebutStation;
 	while (pStation != NULL) {
 		int temps = pStation->tempsInoccupee;
 		couts += calculEnFonctionTemps(coutsParHeure, temps);

@@ -2,7 +2,6 @@
 
 
 void affichageStations(Station* pDebutStations) {
-	printf("%p", pDebutStations);
 	Station* pStation = pDebutStations;
 	// initalisation numéro de station
 	int i = 1;

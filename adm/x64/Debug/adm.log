@@ -1,7 +1,46 @@
-﻿  majStations.c
-D:\github\adm\adm\majStations.c(31,34): warning C4047: 'function': 'int *' differs in levels of indirection from 'int **'
-D:\github\adm\adm\majStations.c(31,31): warning C4024: 'genererDuree': different types for formal and actual parameter 1
-D:\github\adm\adm\majStations.c(100,45): warning C4047: '==': 'Client *' differs in levels of indirection from 'int'
-D:\github\adm\adm\majStations.c(101,32): warning C4047: 'function': 'int *' differs in levels of indirection from 'int **'
-D:\github\adm\adm\majStations.c(101,29): warning C4024: 'genererDuree': different types for formal and actual parameter 1
+﻿  affichageCouts.c
+  affichageFile.c
+  affichageFileEtStations.c
+D:\github\adm\adm\affichageFileEtStations.c(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\github\adm\adm\affichageFileEtStations.c(7,26): warning C4047: 'function': 'Client **' differs in levels of indirection from 'Client *'
+D:\github\adm\adm\affichageFileEtStations.c(7,16): warning C4024: 'affichageFile': different types for formal and actual parameter 1
+  affichageStations.c
+  ajoutClientFile.c
+  arriveeOrdinaire.c
+  arriveePrioritaire.c
+  calculCoutsClientAFinis.c
+  calculCoutsStationInnocupée.c
+  calculEnFonctionTemps.c
+  clientImpartientPart.c
+D:\github\adm\adm\clientImpartientPart.c(14,55): warning C4047: 'function': 'Client *' differs in levels of indirection from 'Client **'
+D:\github\adm\adm\clientImpartientPart.c(14,49): warning C4024: 'retirerClientFile': different types for formal and actual parameter 2
+D:\github\adm\adm\clientImpartientPart.c(14,69): warning C4047: 'function': 'Client *' differs in levels of indirection from 'Client **'
+D:\github\adm\adm\clientImpartientPart.c(14,57): warning C4024: 'retirerClientFile': different types for formal and actual parameter 3
+  coutDepartClientImpatient.c
+  genererArrivees.c
+  genererDuree.c
+  initCouts.c
+  initStations.c
+  libérerClientStation.c
+  loiPoisson.c
+  main.c
+  majFile.c
+  Generating Code...
+  Compiling...
+  majStations.c
+D:\github\adm\adm\majStations.c(86,26): warning C4047: '==': 'Client *' differs in levels of indirection from 'Client **'
+D:\github\adm\adm\majStations.c(87,37): warning C4047: '=': 'Client *' differs in levels of indirection from 'Client **'
+D:\github\adm\adm\majStations.c(88,24): warning C4047: '=': 'Client **' differs in levels of indirection from 'Client *'
+D:\github\adm\adm\majStations.c(95,48): warning C4047: '=': 'Client *' differs in levels of indirection from 'Client **'
+D:\github\adm\adm\majStations.c(96,42): warning C4047: '=': 'Client **' differs in levels of indirection from 'Client *'
+D:\github\adm\adm\majStations.c(98,45): warning C4047: '==': 'Client *' differs in levels of indirection from 'int'
+D:\github\adm\adm\majStations.c(78,1): warning C4047: 'initializing': 'Client *' differs in levels of indirection from 'Client **'
+  nbStationsOptimal.c
+D:\github\adm\adm\nbStationsOptimal.c(45,39): warning C4133: 'function': incompatible types - from 'Client *' to 'Station *'
+D:\github\adm\adm\nbStationsOptimal.c(45,54): warning C4133: 'function': incompatible types - from 'Station *' to 'Client *'
+  nombreAléatoire.c
+  rechercheCoutsParHeure.c
+  rechercheMin.c
+  retirerClientFile.c
+  Generating Code...
   adm.vcxproj -> D:\github\adm\x64\Debug\adm.exe

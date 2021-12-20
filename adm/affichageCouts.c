@@ -4,9 +4,9 @@
 
 void affichageCouts(int nbStationsMin, int nbStationsMax, Couts couts[]) {
 
-	int nbCellules = nbStationsMax - nbStationsMin + 1;
+	int nbCellules = (nbStationsMax - nbStationsMin) + 1;
 
-	for (int iCouts = 0; iCouts < nbCellules; iCouts++) {
+	for (int iCouts = 0; iCouts < NBCOUTS; iCouts++) {
 
 		couts[iCouts].coutsTotal = (
 			couts[iCouts].coutsDepartsOrdinaire

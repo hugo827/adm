@@ -12,7 +12,7 @@ Station* initStations(int nbStation) {
 		if (continuer) {
 			pNouv->pSuivStation = NULL;
 			pNouv->pClient = NULL;
-			pNouv->tempsInoccupee = 0;
+			pNouv->tempsInoccupee = -1;
 
 			if (pDebutStations == NULL) {
 				pDebutStations = pNouv;	

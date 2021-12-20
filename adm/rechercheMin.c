@@ -1,9 +1,9 @@
 #include "Header.h"
 
 
-int rechercheMin(int nbStationsMin, int nbStations, Couts couts[]) {
+int rechercheMin(int nbStationsMin, int nbStationsMax, Couts couts[]) {
 	int i = 1;
-	int nbCellulesCouts = nbStations - nbStationsMin + 1;
+	int nbCellulesCouts = nbStationsMax - nbStationsMin + 1;
 	int nbStationsOptimal = nbStationsMin;
 	int coutTotalMin = couts[0].coutsTotal;
 
