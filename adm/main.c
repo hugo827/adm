@@ -13,7 +13,7 @@ void main(void) {
 	int nbStationsMax = 5;
 	int tempsSimul = 500;
 
-	printf("\n Vaux valeur :" 
+	printf("\n vos valeur :" 
 		"\n\t - a : %d "
 		"\n\t - c : %d "
 		"\n\t - m : %d "

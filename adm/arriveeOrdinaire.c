@@ -1,11 +1,11 @@
 #include "Header.h"
 
 
-int arriveeOrdinaire(int paramOrd, int a, int c, int m, int* xn) {
+int arriveeOrdinaire(double paramOrd, int a, int c, int m, int* xn) {
 
 	int nbArriveesO = 0;
 
-	(*xn) = nombreAléatoire(a, c, m, *xn);
+	(*xn) = nombreAleatoire(a, c, m, *xn);
 	
 	double U1 = (*xn) / m;
 

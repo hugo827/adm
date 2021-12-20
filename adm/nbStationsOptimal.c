@@ -32,8 +32,8 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 			if (temps <= 20 && nbStations == nbStationsMin) {
 				affichageFile(&pDebutFile);
 			}
-
-			majStation(&pDebutFile, &pDebutStation, &xn, a, c, m, couts[iCouts] );
+			printf("%p", pDebutStation);
+			majStation(pDebutStation, &pDebutFile, &xn, a, c, m, couts[iCouts] );
 
 			majFile(&pDebutFile);
 

@@ -1,33 +1,7 @@
-﻿  genererDuree.c
-D:\github\adm\adm\genererDuree.c(7,10): error C3872: '0xa9': this character is not allowed in an identifier
-D:\github\adm\adm\genererDuree.c(7,28): warning C4013: 'nombreAlÃ©atoire' undefined; assuming extern returning int
-  initCouts.c
-  initStations.c
-  libérerClientStation.c
-  majStations.c
-D:\github\adm\adm\majStations.c(30,34): warning C4047: 'function': 'int *' differs in levels of indirection from 'int **'
-D:\github\adm\adm\majStations.c(30,31): warning C4024: 'genererDuree': different types for formal and actual parameter 1
-D:\github\adm\adm\majStations.c(99,45): warning C4047: '==': 'Client *' differs in levels of indirection from 'int'
-D:\github\adm\adm\majStations.c(100,32): warning C4047: 'function': 'int *' differs in levels of indirection from 'int **'
-D:\github\adm\adm\majStations.c(100,29): warning C4024: 'genererDuree': different types for formal and actual parameter 1
-  nbStationsOptimal.c
-D:\github\adm\adm\nbStationsOptimal.c(30,49): warning C4047: 'function': 'Client *' differs in levels of indirection from 'Client **'
-D:\github\adm\adm\nbStationsOptimal.c(30,38): warning C4024: 'genererArrivees': different types for formal and actual parameter 5
-D:\github\adm\adm\nbStationsOptimal.c(33,30): warning C4047: 'function': 'Client *' differs in levels of indirection from 'Client **'
-D:\github\adm\adm\nbStationsOptimal.c(33,19): warning C4024: 'affichageFile': different types for formal and actual parameter 1
-D:\github\adm\adm\nbStationsOptimal.c(36,26): warning C4047: 'function': 'Station *' differs in levels of indirection from 'Client **'
-D:\github\adm\adm\nbStationsOptimal.c(36,15): warning C4024: 'majStation': different types for formal and actual parameter 1
-D:\github\adm\adm\nbStationsOptimal.c(36,42): warning C4047: 'function': 'Client *' differs in levels of indirection from 'Station **'
-D:\github\adm\adm\nbStationsOptimal.c(36,28): warning C4024: 'majStation': different types for formal and actual parameter 2
-D:\github\adm\adm\nbStationsOptimal.c(38,23): warning C4047: 'function': 'Client *' differs in levels of indirection from 'Client **'
-D:\github\adm\adm\nbStationsOptimal.c(38,12): warning C4024: 'majFile': different types for formal and actual parameter 1
-D:\github\adm\adm\nbStationsOptimal.c(41,54): warning C4047: 'function': 'Client *' differs in levels of indirection from 'Station **'
-D:\github\adm\adm\nbStationsOptimal.c(41,40): warning C4024: 'clientImpatientPart': different types for formal and actual parameter 2
-D:\github\adm\adm\nbStationsOptimal.c(45,40): warning C4047: 'function': 'Station *' differs in levels of indirection from 'Client **'
-D:\github\adm\adm\nbStationsOptimal.c(45,29): warning C4024: 'affichageFileEtStations': different types for formal and actual parameter 1
-D:\github\adm\adm\nbStationsOptimal.c(45,56): warning C4047: 'function': 'Client *' differs in levels of indirection from 'Station **'
-D:\github\adm\adm\nbStationsOptimal.c(45,42): warning C4024: 'affichageFileEtStations': different types for formal and actual parameter 2
-D:\github\adm\adm\nbStationsOptimal.c(52,85): warning C4047: 'function': 'Station *' differs in levels of indirection from 'Station **'
-D:\github\adm\adm\nbStationsOptimal.c(52,71): warning C4024: 'calculCoutsStationInoccupée': different types for formal and actual parameter 1
-  retirerClientFile.c
-  Generating Code...
+﻿  majStations.c
+D:\github\adm\adm\majStations.c(31,34): warning C4047: 'function': 'int *' differs in levels of indirection from 'int **'
+D:\github\adm\adm\majStations.c(31,31): warning C4024: 'genererDuree': different types for formal and actual parameter 1
+D:\github\adm\adm\majStations.c(100,45): warning C4047: '==': 'Client *' differs in levels of indirection from 'int'
+D:\github\adm\adm\majStations.c(101,32): warning C4047: 'function': 'int *' differs in levels of indirection from 'int **'
+D:\github\adm\adm\majStations.c(101,29): warning C4024: 'genererDuree': different types for formal and actual parameter 1
+  adm.vcxproj -> D:\github\adm\x64\Debug\adm.exe

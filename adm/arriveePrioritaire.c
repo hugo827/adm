@@ -1,9 +1,9 @@
 #include "Header.h"
 
 
-int arriveePrioritaire(int paramPrior, int a, int c, int m, int* xn) {
+int arriveePrioritaire(double paramPrior, int a, int c, int m, int* xn) {
 
-	(*xn) = nombreAléatoire(a, c, m, (*xn));
+	(*xn) = nombreAleatoire(a, c, m, (*xn));
 
 	double U1 = (*xn) / m;
 

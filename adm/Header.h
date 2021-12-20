@@ -62,13 +62,13 @@ Couts calculCoutsClientAFinis(Couts couts, Client* pPart);
 
 int genererDuree(int* xn, int a, int c, int m);
 
-int nombreAléatoire(m, a, c, xn);
+int nombreAleatoire(m, a, c, xn);
 
 double loiPoisson(double param, int k);
 
 void affichageStations(Station* pDebutStations);
 
-void affichageFile(Client* pDebutFile);
+void affichageFile(Client** pDebutFile);
 
 void affichageFileEtStations(Station* pDebutStations, Client* pDebutFile);
 
@@ -82,13 +82,13 @@ void majStation(Station* pDebutStation, Client* pDebutFile, int* xn, int a, int 
 
 Couts libérerClientStation(Station* pStation, Couts couts);
 
-int genererArrivees(int a, int c, int m, int xn, Client* pDebutFile);
+int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile);
 
-int arriveePrioritaire(int paramPrior, int a, int c, int m, int* xn);
+int arriveePrioritaire(double paramPrior, int a, int c, int m, int* xn);
 
-int arriveeOrdinaire(int paramOrd, int a, int c, int m, int* xn);
+int arriveeOrdinaire(double paramOrd, int a, int c, int m, int* xn);
 
-Client* ajouterClientFile(char statut, Client* pDebutFile);
+Client* ajouterClientFile(char statut, Client** pDebutFile);
 
 Couts clientImpatientPart(Couts couts, Client* pDebutFile);
 

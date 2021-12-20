@@ -24,5 +24,4 @@ void affichageStations(Station* pDebutStations) {
 		pStation = pStation->pSuivStation;
 		i++;
 	}
-	printf("<------------------------Fin affichage station------------------------>\n");
 }

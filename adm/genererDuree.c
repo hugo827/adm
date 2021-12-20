@@ -3,8 +3,7 @@
 
 int genererDuree(int* xn, int a,int c, int m) {
 	int duree;
-
-	(*xn) = nombreAléatoire(m, a, c, *xn);
+	 *xn = nombreAleatoire(m, a, c, *xn);
 
 	double u1 = (double) (*xn) / m;
 	

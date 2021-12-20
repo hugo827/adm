@@ -1,6 +1,6 @@
 #include "Header.h"
 
 
-int nombreAléatoire(int m, int a, int c, int xn) {
-	return a * xn + c % m;
+int nombreAleatoire(int m, int a, int c, int xn) {
+	return (a * xn + c)% m;
 }

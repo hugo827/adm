@@ -6,6 +6,7 @@ void majStation(Station* pDebutStation, Client* pDebutFile, int* xn, int a, int 
 	Station* pStation = pDebutStation;
 	Change* pDebutChangement = NULL; 
 	Change* pChange = pDebutChangement;
+	printf("\n%p\n",pDebutStation);
 
 	while (pStation != NULL) {
 		if (pStation->pClient != NULL) {
@@ -18,7 +19,7 @@ void majStation(Station* pDebutStation, Client* pDebutFile, int* xn, int a, int 
 
 
 		// Si client à fini son temps à la station
-		if (pStation->pClient->tempsRestantStation == 0) couts = libérerClientStation(pStation, couts);
+		if (pStation->pClient != NULL && pStation->pClient->tempsRestantStation == 0) couts = libérerClientStation(pStation, couts);
 
 		// si il y a un client dispo dans la file->il se met à la station
 		if (pStation->pClient == NULL) {
@@ -32,7 +33,7 @@ void majStation(Station* pDebutStation, Client* pDebutFile, int* xn, int a, int 
 				}
 			}
 			else {
-				if (pStation->pClient->statut == 'O') {
+				if (pStation->pClient != NULL && pStation->pClient->statut == 'O') {
 					Change* pNouv = (Change*)malloc(sizeof(Change));
 
 					if (pNouv != NULL) {
