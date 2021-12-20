@@ -6,7 +6,7 @@ Couts coutDepartClientImpatient(Client* pFile, Couts couts) {
 	
 	int coutsParHeureSystem = 0, coutsParHeureStation = 0;
 
-	rechercheCoutsParHeure(pFile->statut, &coutsParHeureSystem, &coutsParHeureSystem);
+	rechercheCoutsParHeure(pFile->statut, &coutsParHeureSystem, &coutsParHeureStation);
 
 	int coutsTemps = calculEnFonctionTemps(coutsParHeureSystem, pFile->tempsPasseSystem);
 
