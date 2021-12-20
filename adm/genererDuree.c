@@ -3,22 +3,36 @@
 
 int genererDuree(int* xn, int a,int c, int m) {
 	int duree;
-	 *xn = nombreAleatoire(m, a, c, *xn);
+	int xTemp;
+	xTemp = nombreAleatoire(m, a, c, *xn);
 
-	double u1 = ((double)(*xn) /(double)m);
+	double u1 = ((double)(xTemp) /(double)m);
 	
+	*xn = xTemp;
 
 	if (u1 < 0.38) //r=24
+	{
 		duree = 1;
+	}
 	else {
-		if (u1 < 0.67) duree = 2; //r=18
+		if (u1 < 0.67) {
+			duree = 2;
+		} //r=18
 		else {
-			if (u1 < 0.85) duree = 3; //r=11
+			if (u1 < 0.85) {
+				duree = 3;
+			} //r=11
 			else {
-				if (u1 < 0.92) duree = 4;
+				if (u1 < 0.92) {
+					duree = 4;
+				}
 				else {
-					if (u1 < 0.97) duree = 5;
-					else duree = 6;
+					if (u1 < 0.97) {
+						duree = 5;
+					}
+					else {
+						duree = 6;
+					}
 				}
 			}
 		}

@@ -7,7 +7,6 @@ int arriveePrioritaire(double paramPrior, int a, int c, int m, int* xn) {
 
 	int temp = nombreAleatoire(a, c, m, xTemps);
 
-	
 	*xn = temp;
 	double U1 = ((double)(temp) / (double)m);
 
@@ -20,17 +19,37 @@ int arriveePrioritaire(double paramPrior, int a, int c, int m, int* xn) {
 
 	double pTotal = p0;
 
-	if (U1 < pTotal) nbArrivéesP = 0;
-	else {
+	if (U1 < pTotal)
+	{
+		nbArrivéesP = 0;
+	}
+	else
+	{
 		pTotal += p1;
-		if (U1 < pTotal)nbArrivéesP = 1;
-		else {
+
+		if (U1 < pTotal)
+		{
+			nbArrivéesP = 1;
+		}
+		else 
+		{
 			pTotal += p2;
-			if (U1 < pTotal)nbArrivéesP = 2;
-			else {
+			
+			if (U1 < pTotal) 
+			{
+				nbArrivéesP = 2;
+			}
+			else
+			{
 				pTotal += p3;
-				if (U1 < pTotal)nbArrivéesP = 3;
-				else nbArrivéesP = 4;
+				if (U1 < pTotal)
+				{
+					nbArrivéesP = 3;
+				}
+				else
+				{
+					nbArrivéesP = 4;
+				}
 			}
 		}
 	}

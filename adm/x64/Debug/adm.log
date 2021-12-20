@@ -1,4 +1,7 @@
-﻿  ajoutClientFile.c
-  nombreAléatoire.c
+﻿  arriveeOrdinaire.c
+  arriveePrioritaire.c
+  genererArrivees.c
+  genererDuree.c
+  loiPoisson.c
   Generating Code...
   adm.vcxproj -> D:\github\adm\x64\Debug\adm.exe

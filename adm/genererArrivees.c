@@ -14,9 +14,10 @@ int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile) {
 	if (nbArriveesPrioritaire != 0) {
 		while (iP < nbArriveesPrioritaire) {
 			// ressortir nbr aleatoire pour definir si prior absolue (30%) ou relatif
-			xn = nombreAleatoire(m, a, c, xn);
+			int xnTemp = nombreAleatoire(m, a, c, xn);
+			xn = xnTemp;
 			char statut;
-			double U1 =  ((double)xn / (double)m);
+			double U1 =  (double)((double)xn / (double)m);
 			if (U1 < 0.3) {
 				statut = 'A';
 				nbArriveesAbsolue++;
@@ -54,11 +55,11 @@ int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile) {
 		}
 	}
 
-	/*
+	
 	printf("<------------------------Affichage du nombre d'arrivees ----------------------->\n");
 	printf("Nombre d'arrivees prioritaire absolue : %d\n", nbArriveesAbsolue);
 	printf("Nombre d'arrivees prioritaire relative : %d\n", nbArriveesRelatif);
 	printf("Nombre d'arrivees ordinaire : %d\n", nbArriveesOrdinaire);
-	*/
+	
 	return xn;
 }

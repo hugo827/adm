@@ -6,6 +6,11 @@ double loiPoisson(double param, int k) {
 		for (int i = 1; i <= k; i++) {
 			factorial *= i;
 		}
+			
+		return (exp(-param) * (pow(param, k))) / factorial;
 	}
-	return (exp(-param) * (pow(param, k))) / factorial;
+	else {
+		return (exp(-param));
+	}
+	
 } 
