@@ -2,7 +2,10 @@
 
 
 int rechercheMin(int nbStationsMin, int nbStations, Couts couts[]) {
-	int i = 1, nbCellulesCouts = nbStations - nbStationsMin + 1, nbStationsOptimal = nbStationsMin, coutTotalMin = couts[0].coutsTotal;
+	int i = 1;
+	int nbCellulesCouts = nbStations - nbStationsMin + 1;
+	int nbStationsOptimal = nbStationsMin;
+	int coutTotalMin = couts[0].coutsTotal;
 
 	while (i < nbCellulesCouts) {
 		if (couts[i].coutsTotal < coutTotalMin) {
