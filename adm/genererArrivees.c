@@ -7,7 +7,7 @@ int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile) {
 
 	int nbArriveesPrioritaire = arriveePrioritaire(paramPrior, a, c, m, &xn);
 
-	int nbArriveesOrdinaire = arriveePrioritaire(paramOrdi, a, c, m, &xn);
+	int nbArriveesOrdinaire = arriveeOrdinaire(paramOrdi, a, c, m, &xn);
 
 	int iP = 0, iO = 0, nbArriveesAbsolue = 0, nbArriveesRelatif = 0;
 

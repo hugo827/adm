@@ -2,5 +2,5 @@
 
 
 int nombreAleatoire(int m, int a, int c, int xn) {
-	return (a * xn + c)% m;
+	return (((a * xn)+ c) % m);
 }
