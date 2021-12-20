@@ -8,4 +8,4 @@ double loiPoisson(double param, int k) {
 		}
 	}
 	return (exp(-param) * (pow(param, k))) / factorial;
-}
+} 
