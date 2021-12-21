@@ -1,9 +1,9 @@
 #include "Header.h"
 
 
-Client* retirerClientFile(Client* pDebutFile, Client* pClientImpatient, Client* pPrecClient) {
+Client* retirerClientFile(Client* pDebutFile, Client* pClientImpatient, Client** pPrecClient) {
 
-	pPrecClient->pSuivClient = pClientImpatient->pSuivClient;
+	(*pPrecClient)->pSuivClient = pClientImpatient->pSuivClient;
 
 	free(pClientImpatient);
 

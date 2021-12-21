@@ -6,6 +6,9 @@ void affichageStations(Station* pDebutStations) {
 	// initalisation numéro de station
 	int i = 1;
 	printf("<------------------------Debut affichage station------------------------>\n");
+	if (pStation == NULL) {
+		printf("Pas de station\n");
+	}
 	//Tant qu'il reste des stations à parcourir
 	while (pStation != NULL) {
 		if (pStation->pClient == NULL) {
@@ -23,7 +26,5 @@ void affichageStations(Station* pDebutStations) {
 		pStation = pStation->pSuivStation;
 		i++;
 	}
-	if (pStation == NULL) {
-		printf("Pas de station\n");
-	}
+	
 }

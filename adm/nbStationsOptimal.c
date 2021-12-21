@@ -1,6 +1,8 @@
 #include "Header.h"
 
 
+// j'ai modifier les params pour loi de poisson avec de plus grande valeur et ca a fonctioner. 
+
 int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int a, int c, int m, int x0) {
 
 	int nbStations = nbStationsMin;
@@ -30,7 +32,7 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 			xn = genererArrivees(a, c, m, xn, &pDebutFile);
 
 			if (temps <= 20 && nbStations == nbStationsMin) {
-				affichageFile(&pDebutFile);
+				affichageFile(pDebutFile);
 			}
 
 			xn = majStation(pDebutStation, &pDebutFile, xn, a, c, m, couts[iCouts] );
@@ -42,7 +44,8 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 			}
 
 			if (temps <= 20 && nbStations == nbStationsMin) {
-				affichageFileEtStations(&pDebutFile, &pDebutStation);
+				affichageStations(pDebutStation);
+				affichageFile(pDebutFile);
 			}
 
 

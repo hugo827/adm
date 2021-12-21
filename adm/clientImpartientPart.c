@@ -9,11 +9,12 @@ Couts clientImpatientPart(Couts couts, Client** pDebutFile) {
 
 	while (pFile != NULL) {
 		if (pFile->tempsPasseFile >= 10 && placeFile > 3) {
-
 			couts = coutDepartClientImpatient(pFile, couts);
-			*pDebutFile = retirerClientFile(*pDebutFile, &pFile, &pPrecClient);
+			*pDebutFile = retirerClientFile(*pDebutFile, pFile, &pPrecClient);
 		}
-		pPrecClient = pFile;
+		else {
+			pPrecClient = pFile;
+		}
 		pFile = pFile->pSuivClient;
 		placeFile++;
 	}

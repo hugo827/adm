@@ -7,10 +7,10 @@ double loiPoisson(double param, int k) {
 			factorial *= i;
 		}
 			
-		return (exp(-param) * (pow(param, k))) / factorial;
+		return ((exp((-param)) * (pow(param, k))) / factorial);
 	}
 	else {
-		return (exp(-param));
+		return (exp((-param)));
 	}
 	
 } 

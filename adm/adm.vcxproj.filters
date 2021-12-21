@@ -74,9 +74,6 @@
     <ClCompile Include="affichageFile.c">
       <Filter>Source Files\display</Filter>
     </ClCompile>
-    <ClCompile Include="affichageFileEtStations.c">
-      <Filter>Source Files\display</Filter>
-    </ClCompile>
     <ClCompile Include="rechercheMin.c">
       <Filter>Source Files\calculate</Filter>
     </ClCompile>

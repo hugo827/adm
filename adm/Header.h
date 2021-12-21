@@ -68,7 +68,7 @@ double loiPoisson(double param, int k);
 
 void affichageStations(Station* pDebutStations);
 
-void affichageFile(Client** pDebutFile);
+void affichageFile(Client* pDebutFile);
 
 void affichageFileEtStations(Station** pDebutStations, Client** pDebutFile);
 
@@ -92,7 +92,7 @@ Client* ajouterClientFile(char statut, Client** pDebutFile);
 
 Couts clientImpatientPart(Couts couts, Client** pDebutFile);
 
-Client* retirerClientFile(Client* pDebutFile, Client* pClientImpatient, Client* pPrecClient);
+Client* retirerClientFile(Client* pDebutFile, Client* pClientImpatient, Client** pPrecClient);
 
 Couts coutDepartClientImpatient(Client* pFile, Couts couts);
 

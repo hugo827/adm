@@ -24,7 +24,6 @@
   <ItemGroup>
     <ClCompile Include="affichageCouts.c" />
     <ClCompile Include="affichageFile.c" />
-    <ClCompile Include="affichageFileEtStations.c" />
     <ClCompile Include="affichageStations.c" />
     <ClCompile Include="ajoutClientFile.c" />
     <ClCompile Include="arriveeOrdinaire.c" />
