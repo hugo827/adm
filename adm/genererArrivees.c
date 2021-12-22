@@ -4,8 +4,8 @@
 int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile) {
 	
 
-	double paramPrior = 7;
-	double paramOrdi = 20;
+	double paramPrior = 4;
+	double paramOrdi = 10;
 
 	int nbArriveesPrioritaire = arriveePrioritaire(paramPrior, a, c, m, &xn);
 
@@ -20,6 +20,7 @@ int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile) {
 			xn = xnTemp;
 			char statut;
 			double U1 =  (double)((double)xn / (double)m);
+			
 			if (U1 < 0.3) {
 				statut = 'A';
 				nbArriveesAbsolue++;
@@ -57,11 +58,11 @@ int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile) {
 		}
 	}
 
-	
+	/*
 		printf("<------------------------Affichage du nombre d'arrivees ----------------------->\n");
 		printf("Nombre d'arrivees prioritaire absolue : %d\n", nbArriveesAbsolue);
 		printf("Nombre d'arrivees prioritaire relative : %d\n", nbArriveesRelatif);
 		printf("Nombre d'arrivees ordinaire : %d\n", nbArriveesOrdinaire);
-	
+	*/
 	return xn;
 }

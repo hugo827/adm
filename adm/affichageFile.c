@@ -9,7 +9,7 @@ void affichageFile(Client* pDebutFile) {
 		printf("Pas de file\n");
 	}
 	while (pFile != NULL) {
-		printf(" - Temps Station : %d  --- Temps System : %d --- Temps File : %d\n", pFile->tempsRestantStation, pFile->tempsPasseSystem, pFile->tempsPasseFile);
+		printf("Statut : %c - Temps Station : %d  --- Temps System : %d --- Temps File : %d\n",pFile->statut, pFile->tempsRestantStation, pFile->tempsPasseSystem, pFile->tempsPasseFile);
 		pFile = pFile->pSuivClient;
 	}
 	

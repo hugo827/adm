@@ -1,2 +1,5 @@
-﻿  genererArrivees.c
+﻿  arriveePrioritaire.c
+  main.c
+  nbStationsOptimal.c
+  Generating Code...
   adm.vcxproj -> D:\github\adm\x64\Debug\adm.exe

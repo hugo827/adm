@@ -29,6 +29,7 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 				if (pStation->pClient->tempsRestantStation == -1) {
 					int duree = genererDuree(&xn, a, c, m);
 					pStation->pClient->tempsRestantStation = duree;
+					
 				}
 			}
 			else {

@@ -7,7 +7,7 @@ void main(void) {
 	int m = 63, a = 22, c = 4, x0 = 19;
 
 	int nbStationsMin = 2;
-	int nbStationsMax = 2;
+	int nbStationsMax = 5;
 	int tempsSimul = 500;
 
 	printf("\n vos valeur :" 

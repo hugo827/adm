@@ -18,7 +18,7 @@ int arriveePrioritaire(double paramPrior, int a, int c, int m, int* xn) {
 	double p3 = loiPoisson(paramPrior, 3);
 
 	double pTotal = p0;
-
+	
 	if (U1 < pTotal)
 	{
 		nbArrivéesP = 0;
@@ -26,7 +26,7 @@ int arriveePrioritaire(double paramPrior, int a, int c, int m, int* xn) {
 	else
 	{
 		pTotal += p1;
-
+		
 		if (U1 < pTotal)
 		{
 			nbArrivéesP = 1;
@@ -42,6 +42,7 @@ int arriveePrioritaire(double paramPrior, int a, int c, int m, int* xn) {
 			else
 			{
 				pTotal += p3;
+				
 				if (U1 < pTotal)
 				{
 					nbArrivéesP = 3;

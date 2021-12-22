@@ -52,7 +52,7 @@ Client* ajouterClientFile(char statut, Client** pDebutFile) {
 			break;
 		case 'R':
 
-			while (pFile != NULL && pFile->statut == 'O') {
+			while (pFile != NULL && pFile->statut != 'O') {
 				pPrecClient = pFile;
 				pFile = pFile->pSuivClient;
 			}
