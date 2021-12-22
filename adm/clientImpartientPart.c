@@ -1,7 +1,7 @@
 #include "Header.h"
 
 
-void clientImpatientPart(Couts* couts, Client** pDebutFile, int afficherArriv) {
+void clientImpatientPart(Couts* couts, Client** pDebutFile, int affiche) {
 
 	Client* pPrecClient = NULL;
 	Client* pFile = *pDebutFile;
@@ -22,7 +22,7 @@ void clientImpatientPart(Couts* couts, Client** pDebutFile, int afficherArriv) {
 		}
 		placeFile++;
 	}
-		if (afficherArriv) {
+		if (affiche) {
 		printf("Nombre de clients impatients partis: %d\n", nbrClientPartis);
 	}
 
