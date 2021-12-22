@@ -1,7 +1,7 @@
 #include "Header.h"
 
 
-int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c, int m, Couts couts) {
+int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c, int m, Couts* couts) {
 
 	Station* pStation = pDebutStation;
 	Change* pDebutChangement = NULL; 
@@ -18,7 +18,7 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 
 		
 		// Si client à fini son temps à la station
-		if (pStation->pClient != NULL && pStation->pClient->tempsRestantStation == 0) libérerClientStation(pStation, couts);
+		if (pStation->pClient != NULL && pStation->pClient->tempsRestantStation == 0) { libérerClientStation(pStation, couts); }
 
 		// si il y a un client dispo dans la file->il se met à la station
 		if (pStation->pClient == NULL) {
@@ -115,6 +115,7 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 		}
 		free(pModification);	
 	}
+
 
 	return xn;
 }

@@ -1,7 +1,7 @@
 #include "Header.h"
 
 
-void clientImpatientPart(Couts couts, Client** pDebutFile) {
+void clientImpatientPart(Couts* couts, Client** pDebutFile) {
 
 	Client* pPrecClient = NULL;
 	Client* pFile = *pDebutFile;

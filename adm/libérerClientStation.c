@@ -1,7 +1,7 @@
 #include "Header.h"
 
 
-void libérerClientStation(Station* pStation, Couts couts) {
+void libérerClientStation(Station* pStation, Couts* couts) {
 	
 	Client* pPart = pStation->pClient;
 

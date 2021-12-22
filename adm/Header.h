@@ -58,7 +58,7 @@ double calculCoutsStationInoccupée(Station* pDebutStation);
 
 double calculEnFonctionTemps(int coutsParHeure, int temps);
 
-void calculCoutsClientAFinis(Couts couts, Client* pPart);
+void calculCoutsClientAFinis(Couts* couts, Client* pPart);
 
 int genererDuree(int* xn, int a, int c, int m);
 
@@ -78,9 +78,9 @@ Station* initStations(int nbStation);
 
 void majFile(Client* pDebutClient);
 
-int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c, int m, Couts couts); 
+int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c, int m, Couts* couts); 
 
-void libérerClientStation(Station* pStation, Couts couts);
+void libérerClientStation(Station* pStation, Couts* couts);
 
 int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile);
 
@@ -90,10 +90,10 @@ int arriveeOrdinaire(double paramOrd, int a, int c, int m, int* xn);
 
 Client* ajouterClientFile(char statut, Client** pDebutFile);
 
-void clientImpatientPart(Couts couts, Client** pDebutFile);
+void clientImpatientPart(Couts* couts, Client** pDebutFile);
 
 Client* retirerClientFile(Client* pDebutFile, Client* pClientImpatient, Client** pPrecClient);
 
-void coutDepartClientImpatient(Client* pFile, Couts couts);
+void coutDepartClientImpatient(Client* pFile, Couts* couts);
 
 void rechercheCoutsParHeure(char status, int* coutsParHeureSystem, int* coutsParHeureStation);
