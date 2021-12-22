@@ -29,6 +29,7 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 			 affiche = temps <= 20 && nbStations == nbStationsMin;
 			
 			if (affiche) {
+				printf("\nTEMPS = %d minute(s)\n\n", temps-1);
 				affichageStations(pDebutStation);
 			}
 			
