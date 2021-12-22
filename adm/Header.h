@@ -78,9 +78,9 @@ void majFile(Client* pDebutClient);
 
 int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c, int m, Couts* couts); 
 
-void libérerClientStation(Station* pStation, Couts* couts);
+void libÃ©rerClientStation(Station* pStation, Couts* couts);
 
-int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile, double paramPrior, double paramOrdi, bool afficheArriv);
+int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile, double paramPrior, double paramOrdi, bool affiche);
 
 int arriveePrioritaire(double paramPrior, int a, int c, int m, int* xn);
 
@@ -88,7 +88,7 @@ int arriveeOrdinaire(double paramOrd, int a, int c, int m, int* xn);
 
 Client* ajouterClientFile(char statut, Client** pDebutFile);
 
-void clientImpatientPart(Couts* couts, Client** pDebutFile);
+void clientImpatientPart(Couts* couts, Client** pDebutFile, int affiche);
 
 Client* retirerClientFile(Client* pDebutFile, Client* pClientImpatient, Client** pPrecClient);
 
