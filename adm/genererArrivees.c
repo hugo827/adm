@@ -55,11 +55,11 @@ int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile, double par
 		}
 	}
 
-	/*
+	
 		printf("<------------------------Affichage du nombre d'arrivees ----------------------->\n");
 		printf("Nombre d'arrivees prioritaire absolue : %d\n", nbArriveesAbsolue);
 		printf("Nombre d'arrivees prioritaire relative : %d\n", nbArriveesRelatif);
 		printf("Nombre d'arrivees ordinaire : %d\n", nbArriveesOrdinaire);
-	*/
+	
 	return xn;
 }
