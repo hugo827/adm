@@ -3,7 +3,7 @@
 
 // j'ai modifier les params pour loi de poisson avec de plus grande valeur et ca a fonctioner. 
 
-int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int a, int c, int m, int x0) {
+int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int a, int c, int m, int x0, double paramPrior, double paramOrdi) {
 
 	int nbStations = nbStationsMin;
 
@@ -33,7 +33,7 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 				affichageStations(pDebutStation);
 			}
 			
-			xn = genererArrivees(a, c, m, xn, &pDebutFile);
+			xn = genererArrivees(a, c, m, xn, &pDebutFile, paramPrior, paramOrdi);
 
 			if (temps <= 20 && nbStations == nbStationsMin) {
 				affichageFile(pDebutFile);
@@ -60,17 +60,19 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 		couts[iCouts] = coutsNbStation;
 		couts[iCouts].coutsStationsInoccupee = calculCoutsStationInoccupée(pDebutStation);
 
+		/*
 		printf("\n- Couts de nbStation\n"
 			"\t - Couts depart ordinaire : %.2lf\n"
 			"\t - Couts depart prioritaire : %.2lf\n"
 			"\t - Couts station prioritaire : %.2lf\n"
-			"\t - Couts station absolue : %.2lf\n"
+			"\t - Couts station ordinaire : %.2lf\n"
 			"\t - Couts station inocupée : %.2lf\n"
 			"\t - Couts system ordinaire : %.2lf\n"
 			"\t - Couts system absolue : %.2lf\n"
 		
 		,coutsNbStation.coutsDepartsOrdinaire, coutsNbStation.coutsDepartsPrioritaire, coutsNbStation.coutsStationsPrioritaire, coutsNbStation.coutsStationOrdinaire, coutsNbStation.coutsStationsInoccupee,
-			coutsNbStation.coutsSystemOrdinaire, coutsNbStation.coutsSystemPrioritaire);
+			coutsNbStation.coutsSystemOrdinaire, coutsNbStation.coutsSystemPrioritaire);*/
+		
 		nbStations++;
 	}
 	

@@ -7,8 +7,11 @@ void main(void) {
 	int m = 63, a = 22, c = 4, x0 = 19;
 
 	int nbStationsMin = 2;
-	int nbStationsMax = 2;
+	int nbStationsMax = 5;
 	int tempsSimul = 500;
+	double paramPrior = 1.7;
+	double paramOrdi = 3;
+
 
 	printf("\n vos valeur :" 
 		"\n\t - a : %d "
@@ -21,7 +24,7 @@ void main(void) {
 		 a, c, m, x0, nbStationsMin, nbStationsMax, tempsSimul
 	);
 
-	int nb = nbStationsOptimal(nbStationsMin, nbStationsMax, tempsSimul, a, c, m, x0);
+	int nb = nbStationsOptimal(nbStationsMin, nbStationsMax, tempsSimul, a, c, m, x0, paramPrior, paramOrdi);
 
 	printf("\n => Le nombre de stations optimal est : %d\n\n", nb);
 

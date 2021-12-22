@@ -43,12 +43,12 @@ struct change {
 	Change* pSuivChange;
 };
 
-#define NBCOUTS 2
+#define NBCOUTS 4
 #define EXIT_FAILURE 1
 #define EXIT_SUCCES 0
 
 
-int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int a, int c, int m, int x0);
+int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int a, int c, int m, int x0, double paramPrior, double paramOrdi);
 
 void initCouts(Couts couts[], int length);
 
@@ -82,7 +82,7 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 
 void libérerClientStation(Station* pStation, Couts* couts);
 
-int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile);
+int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile, double paramPrior, double paramOrdi);
 
 int arriveePrioritaire(double paramPrior, int a, int c, int m, int* xn);
 

@@ -2,5 +2,5 @@
 
 
 double calculEnFonctionTemps(int coutsParHeure, int temps) {
-	return  (double)(coutsParHeure / 60. * temps);
+	return  (double)( (coutsParHeure / 60.) * temps);
 }

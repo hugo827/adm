@@ -8,6 +8,7 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 	Change* pChange = pDebutChangement;
 
 	while (pStation != NULL) {
+
 		if (pStation->pClient != NULL) {
 			pStation->pClient->tempsPasseSystem++;
 			pStation->pClient->tempsRestantStation--;
@@ -29,7 +30,19 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 				if (pStation->pClient->tempsRestantStation == -1) {
 					int duree = genererDuree(&xn, a, c, m);
 					pStation->pClient->tempsRestantStation = duree;
-					
+
+					//rajout cout station par rapport à la durée calculée
+					int coutsParHeureSystem, coutsParHeureStation;
+					char statut = pStation->pClient->statut;
+					rechercheCoutsParHeure(statut, &coutsParHeureSystem, &coutsParHeureStation);
+					double coutsTemps = calculEnFonctionTemps(coutsParHeureStation, duree);
+					if (pStation->pClient->statut == 'O') {
+						(couts->coutsStationOrdinaire += coutsTemps);
+					}
+					else {
+						(couts->coutsStationsPrioritaire += coutsTemps);
+						int j = 0;
+					}
 				}
 			}
 			else {

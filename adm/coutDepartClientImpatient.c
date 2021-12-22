@@ -8,7 +8,7 @@ void coutDepartClientImpatient(Client* pFile, Couts* couts) {
 
 	rechercheCoutsParHeure(pFile->statut, &coutsParHeureSystem, &coutsParHeureStation);
 
-	int coutsTemps = calculEnFonctionTemps(coutsParHeureSystem, pFile->tempsPasseSystem);
+	double coutsTemps = calculEnFonctionTemps(coutsParHeureSystem, pFile->tempsPasseSystem);
 
 	switch (pFile->statut)
 	{

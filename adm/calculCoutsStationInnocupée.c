@@ -3,7 +3,8 @@
 
 
 double calculCoutsStationInoccupée(Station* pDebutStation) {
-	int couts = 0, coutsParHeure = 18;
+	double couts = 0;
+	int coutsParHeure = 18;
 
 	Station* pStation = pDebutStation;
 	while (pStation != NULL) {
