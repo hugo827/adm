@@ -46,7 +46,7 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 			majFile(pDebutFile);
 
 			if (temps > 10) {
-				clientImpatientPart(&coutsNbStation, &pDebutFile);
+				clientImpatientPart(&coutsNbStation, &pDebutFile, affiche);
 			}
 
 			if (affiche) {
@@ -66,7 +66,7 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 			"\t - Couts depart prioritaire : %.2lf\n"
 			"\t - Couts station prioritaire : %.2lf\n"
 			"\t - Couts station ordinaire : %.2lf\n"
-			"\t - Couts station inocupée : %.2lf\n"
+			"\t - Couts station inocupÃ©e : %.2lf\n"
 			"\t - Couts system ordinaire : %.2lf\n"
 			"\t - Couts system absolue : %.2lf\n"
 		
