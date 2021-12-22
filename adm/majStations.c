@@ -18,10 +18,10 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 		}
 
 		
-		// Si client à fini son temps à la station
-		if (pStation->pClient != NULL && pStation->pClient->tempsRestantStation == 0) { libérerClientStation(pStation, couts); }
+		// Si client Ã  fini son temps Ã  la station
+		if (pStation->pClient != NULL && pStation->pClient->tempsRestantStation == 0) { libererClientStation(pStation, couts); }
 
-		// si il y a un client dispo dans la file->il se met à la station
+		// si il y a un client dispo dans la file->il se met Ã  la station
 		if (pStation->pClient == NULL) {
 
 			if (*pDebutFile != NULL) {
@@ -31,7 +31,7 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 					int duree = genererDuree(&xn, a, c, m);
 					pStation->pClient->tempsRestantStation = duree;
 
-					//rajout cout station par rapport à la durée calculée
+					//rajout cout station par rapport Ã  la durÃ©e calculÃ©e
 					int coutsParHeureSystem, coutsParHeureStation;
 					char statut = pStation->pClient->statut;
 					rechercheCoutsParHeure(statut, &coutsParHeureSystem, &coutsParHeureStation);
@@ -59,7 +59,7 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 						pChange = pNouv;
 					}
 					else {
-						printf("plus d'espace mémoire -> partie majStation");
+						printf("plus d'espace mÃ©moire -> partie majStation");
 					}
 				}
 			}
