@@ -54,7 +54,7 @@ void initCouts(Couts couts[], int length);
 
 void affichageCouts(int nbStationsMin, int nbStationsMax, Couts couts[]);
 
-double calculCoutsStationInoccupée(Station* pDebutStation);
+double calculCoutsStationInoccupÃ©e(Station* pDebutStation);
 
 double calculEnFonctionTemps(int coutsParHeure, int temps);
 
@@ -80,9 +80,9 @@ void majFile(Client* pDebutClient);
 
 int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c, int m, Couts* couts); 
 
-void libérerClientStation(Station* pStation, Couts* couts);
+void libÃ©rerClientStation(Station* pStation, Couts* couts);
 
-int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile, double paramPrior, double paramOrdi);
+int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile, double paramPrior, double paramOrdi, bool afficherArriv);
 
 int arriveePrioritaire(double paramPrior, int a, int c, int m, int* xn);
 
