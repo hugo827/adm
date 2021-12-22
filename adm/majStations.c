@@ -16,9 +16,9 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 			pStation->tempsInoccupee++;
 		}
 
-
+		
 		// Si client à fini son temps à la station
-		if (pStation->pClient != NULL && pStation->pClient->tempsRestantStation == 0) couts = libérerClientStation(pStation, couts);
+		if (pStation->pClient != NULL && pStation->pClient->tempsRestantStation == 0) libérerClientStation(pStation, couts);
 
 		// si il y a un client dispo dans la file->il se met à la station
 		if (pStation->pClient == NULL) {

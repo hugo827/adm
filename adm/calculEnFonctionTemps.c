@@ -1,6 +1,6 @@
 #include "Header.h"
 
 
-int calculEnFonctionTemps(int coutsParHeure, int temps) {
-	return  (int)(coutsParHeure / 60. * temps);
+double calculEnFonctionTemps(int coutsParHeure, int temps) {
+	return  (double)(coutsParHeure / 60. * temps);
 }

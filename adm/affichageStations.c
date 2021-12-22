@@ -15,8 +15,8 @@ void affichageStations(Station* pDebutStations) {
 			printf("->Pas de client dans la station %d\n", i);
 		}
 		else {
-			printf("->Client : \n\t - Temps Station Restant : %d\n\t - Temps System : %d \n\t - Temps File : %d\n",
-				pStation->pClient->tempsRestantStation, pStation->pClient->tempsPasseSystem, pStation->pClient->tempsPasseFile
+			printf("->Client : \n\t - Statut : %c \n\t - Temps Station Restant : %d\n\t - Temps System : %d \n\t - Temps File : %d\n",
+				pStation->pClient->statut, pStation->pClient->tempsRestantStation, pStation->pClient->tempsPasseSystem, pStation->pClient->tempsPasseFile
 				);
 		}
 		//a afficher que la station soit inoccupée ou pas

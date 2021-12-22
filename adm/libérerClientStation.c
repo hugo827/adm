@@ -1,13 +1,13 @@
 #include "Header.h"
 
 
-Couts libérerClientStation(Station* pStation, Couts couts) {
+void libérerClientStation(Station* pStation, Couts couts) {
 	
 	Client* pPart = pStation->pClient;
 
-	couts = calculCoutsClientAFinis(couts, pPart);
-
+	calculCoutsClientAFinis(couts, pPart);
+	
 	pStation->pClient = NULL;
 	free(pPart);
-	return couts;
+	
 }

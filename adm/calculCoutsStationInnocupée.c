@@ -2,7 +2,7 @@
 
 
 
-int calculCoutsStationInoccupée(Station* pDebutStation) {
+double calculCoutsStationInoccupée(Station* pDebutStation) {
 	int couts = 0, coutsParHeure = 18;
 
 	Station* pStation = pDebutStation;

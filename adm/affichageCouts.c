@@ -21,14 +21,14 @@ void affichageCouts(int nbStationsMin, int nbStationsMax, Couts couts[]) {
 
 
 		printf(" Pour le nombre de stations  %d : "
-				" \n\t - Departs ordinaire : %d" 
-				"\n\t - Departs Prioritaire : %d"
-				"\n\t - Station ordinaire : %d" 
-				"\n\t - Station prioritaire : %d" 
-				"\n\t - Systeme ordinaire : %d"  
-				"\n\t - System prioritaire : %d" 
-				"\n\t - Station inoccupée : %d"
-				"\n\t => Couts Total : %d\n"
+				" \n\t - Departs ordinaire : %.2lf" 
+				"\n\t - Departs Prioritaire : %.2lf"
+				"\n\t - Station ordinaire : %.2lf" 
+				"\n\t - Station prioritaire : %.2lf" 
+				"\n\t - Systeme ordinaire : %.2lf"  
+				"\n\t - System prioritaire : %.2lf" 
+				"\n\t - Station inoccupée : %.2lf"
+				"\n\t => Couts Total : %.2lf\n"
 			"", (nbStationsMin + iCouts), couts[iCouts].coutsDepartsOrdinaire, couts[iCouts].coutsDepartsPrioritaire, couts[iCouts].coutsStationOrdinaire,
 			couts[iCouts].coutsStationsPrioritaire, couts[iCouts].coutsSystemOrdinaire, couts[iCouts].coutsSystemPrioritaire, couts[iCouts].coutsStationsInoccupee, couts[iCouts].coutsTotal);
 	}

@@ -1,7 +1,7 @@
 #include "Header.h"
 
 
-Couts clientImpatientPart(Couts couts, Client** pDebutFile) {
+void clientImpatientPart(Couts couts, Client** pDebutFile) {
 
 	Client* pPrecClient = NULL;
 	Client* pFile = *pDebutFile;
@@ -9,15 +9,16 @@ Couts clientImpatientPart(Couts couts, Client** pDebutFile) {
 
 	while (pFile != NULL) {
 		if (pFile->tempsPasseFile >= 10 && placeFile > 3) {
-			couts = coutDepartClientImpatient(pFile, couts);
-			*pDebutFile = retirerClientFile(*pDebutFile, pFile, &pPrecClient);
+			Client* pSauv = pFile;
+			pFile = pFile->pSuivClient;
+			coutDepartClientImpatient(pSauv, couts);
+			*pDebutFile = retirerClientFile(*pDebutFile, pSauv, &pPrecClient);
 		}
 		else {
 			pPrecClient = pFile;
+			pFile = pFile->pSuivClient;
 		}
-		pFile = pFile->pSuivClient;
 		placeFile++;
 	}
 
-	return couts;
 }

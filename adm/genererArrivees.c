@@ -3,9 +3,8 @@
 
 int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile) {
 	
-
-	double paramPrior = 4;
-	double paramOrdi = 10;
+	double paramPrior = 3;
+	double paramOrdi = 5;
 
 	int nbArriveesPrioritaire = arriveePrioritaire(paramPrior, a, c, m, &xn);
 

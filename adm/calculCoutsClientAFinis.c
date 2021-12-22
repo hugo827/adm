@@ -2,14 +2,14 @@
 
 
 
-Couts calculCoutsClientAFinis(Couts couts, Client* pPart) {
+void calculCoutsClientAFinis(Couts couts, Client* pPart) {
 
 	char status = pPart->statut;
 	int coutsParHeureSystem, coutsParHeureStation;
 
 	rechercheCoutsParHeure(status, &coutsParHeureSystem, &coutsParHeureStation);
 
-	int coutsTemps = calculEnFonctionTemps(coutsParHeureSystem, pPart->tempsPasseSystem);
+	double coutsTemps = calculEnFonctionTemps(coutsParHeureSystem, pPart->tempsPasseSystem);
 
 	if (status == 'O')  (couts.coutsSystemOrdinaire += coutsTemps); 
 	else (couts.coutsSystemPrioritaire += coutsTemps);
@@ -19,5 +19,4 @@ Couts calculCoutsClientAFinis(Couts couts, Client* pPart) {
 	if (status == 'O') (couts.coutsStationOrdinaire += coutsTemps);
 	else (couts.coutsStationsPrioritaire += coutsTemps);
 	
-	return couts;
 }

@@ -1,7 +1,7 @@
 #include "Header.h"
 
 
-Couts coutDepartClientImpatient(Client* pFile, Couts couts) {
+void coutDepartClientImpatient(Client* pFile, Couts couts) {
 
 	
 	int coutsParHeureSystem = 0, coutsParHeureStation = 0;
@@ -26,5 +26,4 @@ Couts coutDepartClientImpatient(Client* pFile, Couts couts) {
 		break;
 	}
 
-	return couts;
 }

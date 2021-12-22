@@ -27,14 +27,14 @@ struct station {
 
 
 struct couts {
-	int coutsDepartsOrdinaire;
-	int coutsDepartsPrioritaire;
-	int coutsSystemOrdinaire;
-	int coutsSystemPrioritaire;
-	int coutsStationOrdinaire;
-	int coutsStationsPrioritaire;
-	int coutsStationsInoccupee;
-	int coutsTotal;
+	double coutsDepartsOrdinaire;
+	double coutsDepartsPrioritaire;
+	double coutsSystemOrdinaire;
+	double coutsSystemPrioritaire;
+	double coutsStationOrdinaire;
+	double coutsStationsPrioritaire;
+	double coutsStationsInoccupee;
+	double coutsTotal;
 };
 
 struct change {
@@ -43,7 +43,7 @@ struct change {
 	Change* pSuivChange;
 };
 
-#define NBCOUTS 4
+#define NBCOUTS 2
 #define EXIT_FAILURE 1
 #define EXIT_SUCCES 0
 
@@ -54,11 +54,11 @@ void initCouts(Couts couts[], int length);
 
 void affichageCouts(int nbStationsMin, int nbStationsMax, Couts couts[]);
 
-int calculCoutsStationInoccupée(Station* pDebutStation);
+double calculCoutsStationInoccupée(Station* pDebutStation);
 
-int calculEnFonctionTemps(int coutsParHeure, int temps);
+double calculEnFonctionTemps(int coutsParHeure, int temps);
 
-Couts calculCoutsClientAFinis(Couts couts, Client* pPart);
+void calculCoutsClientAFinis(Couts couts, Client* pPart);
 
 int genererDuree(int* xn, int a, int c, int m);
 
@@ -80,7 +80,7 @@ void majFile(Client* pDebutClient);
 
 int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c, int m, Couts couts); 
 
-Couts libérerClientStation(Station* pStation, Couts couts);
+void libérerClientStation(Station* pStation, Couts couts);
 
 int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile);
 
@@ -90,10 +90,10 @@ int arriveeOrdinaire(double paramOrd, int a, int c, int m, int* xn);
 
 Client* ajouterClientFile(char statut, Client** pDebutFile);
 
-Couts clientImpatientPart(Couts couts, Client** pDebutFile);
+void clientImpatientPart(Couts couts, Client** pDebutFile);
 
 Client* retirerClientFile(Client* pDebutFile, Client* pClientImpatient, Client** pPrecClient);
 
-Couts coutDepartClientImpatient(Client* pFile, Couts couts);
+void coutDepartClientImpatient(Client* pFile, Couts couts);
 
 void rechercheCoutsParHeure(char status, int* coutsParHeureSystem, int* coutsParHeureStation);
