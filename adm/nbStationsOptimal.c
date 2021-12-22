@@ -61,7 +61,7 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 			temps++;
 		}
 		couts[iCouts] = coutsNbStation;
-		couts[iCouts].coutsStationsInoccupee = calculCoutsStationInoccupée(pDebutStation);
+		couts[iCouts].coutsStationsInoccupee = calculCoutsStationInoccupee(pDebutStation);
 
 		/*
 		printf("\n- Couts de nbStation\n"
