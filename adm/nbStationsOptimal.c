@@ -7,6 +7,8 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 
 	int nbStations = nbStationsMin;
 
+	bool afficherArriv;
+	
 	int nbCouts = nbStationsMax - nbStationsMin+1;
 
 	Couts couts[NBCOUTS]; // a changer NBCOUTS a chaque modifie de nbStationMin et nbStationsMAX
@@ -33,7 +35,8 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 				affichageStations(pDebutStation);
 			}
 			
-			xn = genererArrivees(a, c, m, xn, &pDebutFile, paramPrior, paramOrdi);
+			afficherArriv = temps <= 20 && nbStations == nbStationsMin;
+			xn = genererArrivees(a, c, m, xn, &pDebutFile, paramPrior, paramOrdi,afficherArriv);
 
 			if (temps <= 20 && nbStations == nbStationsMin) {
 				affichageFile(pDebutFile);
@@ -58,7 +61,7 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 			temps++;
 		}
 		couts[iCouts] = coutsNbStation;
-		couts[iCouts].coutsStationsInoccupee = calculCoutsStationInoccupée(pDebutStation);
+		couts[iCouts].coutsStationsInoccupee = calculCoutsStationInoccupÃ©e(pDebutStation);
 
 		/*
 		printf("\n- Couts de nbStation\n"
@@ -66,7 +69,7 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 			"\t - Couts depart prioritaire : %.2lf\n"
 			"\t - Couts station prioritaire : %.2lf\n"
 			"\t - Couts station ordinaire : %.2lf\n"
-			"\t - Couts station inocupée : %.2lf\n"
+			"\t - Couts station inocupÃ©e : %.2lf\n"
 			"\t - Couts system ordinaire : %.2lf\n"
 			"\t - Couts system absolue : %.2lf\n"
 		
