@@ -48,13 +48,13 @@ struct change {
 #define EXIT_SUCCES 0
 
 
-int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int a, int c, int m, int x0, double paramPrior, double paramOrdi);
+int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int a, int c, int m, int x0, double paramPrior, double paramOrdi );
 
 void initCouts(Couts couts[], int length);
 
 void affichageCouts(int nbStationsMin, int nbStationsMax, Couts couts[]);
 
-double calculCoutsStationInoccupée(Station* pDebutStation);
+double calculCoutsStationInoccupee(Station* pDebutStation);
 
 double calculEnFonctionTemps(int coutsParHeure, int temps);
 
@@ -62,15 +62,13 @@ void calculCoutsClientAFinis(Couts* couts, Client* pPart);
 
 int genererDuree(int* xn, int a, int c, int m);
 
-int nombreAleatoire(m, a, c, xn);
+int nombreAleatoire(int m, int a, int c,int xn);
 
 double loiPoisson(double param, int k);
 
 void affichageStations(Station* pDebutStations);
 
 void affichageFile(Client* pDebutFile);
-
-void affichageFileEtStations(Station** pDebutStations, Client** pDebutFile);
 
 int rechercheMin(int nbStationsMin, int nbStationsMax, Couts couts[]);
 
@@ -82,7 +80,7 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 
 void libérerClientStation(Station* pStation, Couts* couts);
 
-int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile, double paramPrior, double paramOrdi);
+int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile, double paramPrior, double paramOrdi, bool afficheArriv);
 
 int arriveePrioritaire(double paramPrior, int a, int c, int m, int* xn);
 
@@ -96,4 +94,4 @@ Client* retirerClientFile(Client* pDebutFile, Client* pClientImpatient, Client**
 
 void coutDepartClientImpatient(Client* pFile, Couts* couts);
 
-void rechercheCoutsParHeure(char status, int* coutsParHeureSystem, int* coutsParHeureStation);
+void rechercheCoutsParHeure(char statut, int* coutsParHeureSystem, int* coutsParHeureStation);

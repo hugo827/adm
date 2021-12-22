@@ -20,7 +20,7 @@ void affichageCouts(int nbStationsMin, int nbStationsMax, Couts couts[]) {
 
 
 
-		printf(" Pour le nombre de stations  %d : "
+		printf("\n\nPour le nombre de stations  %d : "
 				" \n\t - Departs ordinaire : %.2lf" 
 				"\n\t - Departs Prioritaire : %.2lf"
 				"\n\t - Station ordinaire : %.2lf" 

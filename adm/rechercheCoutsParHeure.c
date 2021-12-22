@@ -2,14 +2,14 @@
 
 
 
-void rechercheCoutsParHeure(char status, int* coutsParHeureSystem, int* coutsParHeureStation) {
+void rechercheCoutsParHeure(char statut, int* coutsParHeureSystem, int* coutsParHeureStation) {
 
 	// init avec les valeurs de absolue
 
 	*coutsParHeureSystem = 45;
 	*coutsParHeureStation = 32;
 
-	switch (status)
+	switch (statut)
 	{
 	case 'O' : 
 		*coutsParHeureSystem = 25;

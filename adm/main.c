@@ -9,8 +9,8 @@ void main(void) {
 	int nbStationsMin = 2;
 	int nbStationsMax = 5;
 	int tempsSimul = 500;
-	double paramPrior = 1.7;
-	double paramOrdi = 3;
+	double paramPrior = 0.7;
+	double paramOrdi = 2;
 
 
 	printf("\n vos valeur :" 
