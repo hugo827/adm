@@ -78,7 +78,7 @@ void majFile(Client* pDebutClient);
 
 int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c, int m, Couts* couts); 
 
-void libérerClientStation(Station* pStation, Couts* couts);
+void libClient(Station* pStation, Couts* couts);
 
 int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile, double paramPrior, double paramOrdi, bool affiche);
 
