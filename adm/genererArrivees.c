@@ -1,7 +1,7 @@
 #include "Header.h"
 
 
-int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile, double paramPrior, double paramOrdi, bool afficheArriv) {
+int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile, double paramPrior, double paramOrdi, bool affiche) {
 	
 
 	int nbArriveesPrioritaire = arriveePrioritaire(paramPrior, a, c, m, &xn);
@@ -55,7 +55,7 @@ int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile, double par
 		}
 	}
 
-	if (afficheArriv) {
+	if (affiche) {
 		printf("<------------------------Affichage du nombre d'arrivees ----------------------->\n");
 		printf("Nombre d'arrivees prioritaire absolue : %d\n", nbArriveesAbsolue);
 		printf("Nombre d'arrivees prioritaire relative : %d\n", nbArriveesRelatif);
