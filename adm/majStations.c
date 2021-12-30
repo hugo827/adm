@@ -47,22 +47,27 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 					}
 				}
 			}
-			else {
-				if (pStation->pClient != NULL && pStation->pClient->statut == 'O') {
+		}
+		else {
+			if (pStation->pClient != NULL && pStation->pClient->statut == 'O') {
 					Change* pNouv = (Change*)malloc(sizeof(Change));
 
-					if (pNouv != NULL) {
-						if (pDebutChangement == NULL) pNouv->pPrec = NULL;
-						else pNouv->pPrec = pChange;
+				if (pNouv != NULL) {
+					if (pDebutChangement == NULL) { 
+						pNouv->pPrec = NULL; 
+						pDebutChangement = pNouv;
+					}
+					else { 
+						pNouv->pPrec = pChange;
+						pChange->pSuivChange = pNouv;
+					}
 
 						pNouv->pStation = pStation;
 						pNouv->pSuivChange = NULL;
-						pChange->pSuivChange = pNouv;
 						pChange = pNouv;
-					}
-					else {
-						printf("plus d'espace mémoire -> partie majStation");
-					}
+				}
+				else {
+					printf("plus d'espace mémoire -> partie majStation");
 				}
 			}
 		}
@@ -71,7 +76,7 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 	
 	
 	// !!! boucle pour remplacer les ordinaires par des absolus
-	while (*pDebutFile != NULL && (*pDebutFile)->statut != 'O' && pDebutChangement != NULL) {
+	while ( (*pDebutFile) != NULL && (*pDebutFile)->statut != 'O' && pDebutChangement != NULL) {
 
 		pChange = pDebutChangement;
 		int tempsRestantMax = 0;
@@ -88,49 +93,61 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 			pChange = pChange->pSuivChange;
 		}
 
-		// a voir 
-		pClient = pModification->pStation->pClient;
-		pClient->statut = 'A';
-		Client* pFile = *pDebutFile;
-		Client* pPrec = NULL;
+		if(pModification != NULL) {
+			// a voir 
+			pClient = pModification->pStation->pClient;
+			pClient->statut = 'A';
+			Client* pFile = *pDebutFile;
+			Client* pPrec = NULL;
+			
 
-		while (pFile != NULL && pFile->statut == 'A') {
-			pPrec = pFile;
-			pFile = pFile->pSuivClient;
-		}
-
-		if (pFile == *pDebutFile) {
-			pClient->pSuivClient = *pDebutFile;
-			*pDebutFile = pClient;
-		}
-		else {
-			pPrec->pSuivClient = pClient;
-			pClient->pSuivClient = pFile;
-		}
-
-		pModification->pStation->pClient = *pDebutFile;
-		*pDebutFile = (*pDebutFile)->pSuivClient;
-
-		if (pModification->pStation->pClient->tempsRestantStation == -1) {
-			int duree = genererDuree(&xn, a, c, m);
-			pModification->pStation->pClient->tempsRestantStation = duree;
-		}
-
-		if (pModification == pDebutChangement) {
-			pModification->pSuivChange->pPrec = NULL;
-			pDebutChangement = pModification->pSuivChange;
-		}
-		else {
-
-			pModification->pPrec->pSuivChange = pModification->pSuivChange;
-
-			if (pModification->pSuivChange != NULL) {
-				pModification->pSuivChange->pPrec = pModification->pPrec;
+			while (pFile != NULL && pFile->statut == 'A') {
+				pPrec = pFile;
+				pFile = pFile->pSuivClient;
 			}
+
+			if (pFile == *pDebutFile) {
+				pClient->pSuivClient = *pDebutFile;
+				*pDebutFile = pClient;
+			}
+			else {
+				pPrec->pSuivClient = pClient;
+				pClient->pSuivClient = pFile;
+			}
+			
+			pModification->pStation->pClient = *pDebutFile;
+			*pDebutFile = (*pDebutFile)->pSuivClient;
+			
+
+			if (pModification->pStation->pClient->tempsRestantStation == -1) {
+				int duree = genererDuree(&xn, a, c, m);
+				pModification->pStation->pClient->tempsRestantStation = duree;
+			}
+
+			if (pModification == pDebutChangement) {
+				
+				pDebutChangement = pModification->pSuivChange;
+				//pDebutChangement->pPrec = NULL;
+			}
+			else {
+
+				pModification->pPrec->pSuivChange = pModification->pSuivChange;
+
+				if (pModification->pSuivChange != NULL) {
+					pModification->pSuivChange->pPrec = pModification->pPrec;
+				}
+			}
+			free(pModification);	
 		}
-		free(pModification);	
 	}
 
+	//Changement !
+	Change* pLib = pDebutChangement;
+	while (pLib != NULL) {
+		Change* pSauv = pLib;
+		pLib = pLib->pSuivChange;
+		free(pSauv);
+	}
 
 	return xn;
 }

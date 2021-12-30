@@ -18,7 +18,7 @@ int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile, double par
 			char statut;
 			double U1 =  (double)((double)xn / (double)m);
 			
-			if (U1 < 0.3) {
+			if (U1 < 0.8) {
 				statut = 'A';
 				nbArriveesAbsolue++;
 			}

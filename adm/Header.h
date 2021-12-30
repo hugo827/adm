@@ -43,7 +43,7 @@ struct change {
 	Change* pSuivChange;
 };
 
-#define NBCOUTS 4
+#define NBCOUTS 13
 #define EXIT_FAILURE 1
 #define EXIT_SUCCES 0
 
