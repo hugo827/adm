@@ -49,10 +49,11 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 			}
 		}
 		else {
-			if (pStation->pClient != NULL && pStation->pClient->statut == 'O') {
+			if (pStation->pClient != NULL && pStation->pClient->statut == 'O' && *pDebutFile != NULL) {
 					Change* pNouv = (Change*)malloc(sizeof(Change));
 
 				if (pNouv != NULL) {
+
 					if (pDebutChangement == NULL) { 
 						pNouv->pPrec = NULL; 
 						pDebutChangement = pNouv;
@@ -76,7 +77,7 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 	
 	
 	// !!! boucle pour remplacer les ordinaires par des absolus
-	while ( (*pDebutFile) != NULL && (*pDebutFile)->statut != 'O' && pDebutChangement != NULL) {
+	while ( (*pDebutFile) != NULL && (*pDebutFile)->statut != 'O' && (*pDebutFile)->statut != 'C' && pDebutChangement != NULL) {
 
 		pChange = pDebutChangement;
 		int tempsRestantMax = 0;
@@ -96,12 +97,12 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 		if(pModification != NULL) {
 			// a voir 
 			pClient = pModification->pStation->pClient;
-			pClient->statut = 'A';
+			pClient->statut = 'C';
 			Client* pFile = *pDebutFile;
 			Client* pPrec = NULL;
 			
-
-			while (pFile != NULL && pFile->statut == 'A') {
+			
+			while (pFile != NULL && (pFile->statut == 'A' || pFile->statut == 'C')) {
 				pPrec = pFile;
 				pFile = pFile->pSuivClient;
 			}
@@ -139,6 +140,14 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 			}
 			free(pModification);	
 		}
+	}
+
+	Client* pFile = *pDebutFile;
+	while (pFile != NULL && (pFile->statut == 'A' || pFile->statut == 'C')) {
+		if (pFile->statut == 'C') {
+			pFile->statut = 'A';
+		}
+		pFile = pFile->pSuivClient;
 	}
 
 	//Changement !
