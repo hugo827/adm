@@ -3,7 +3,7 @@
 
 // j'ai modifier les params pour loi de poisson avec de plus grande valeur et ca a fonctioner. 
 
-int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int a, int c, int m, int x0, double paramPrior, double paramOrdi) {
+int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, unsigned long int a, unsigned long int c, unsigned long int m, unsigned long int x0, double paramPrior, double paramOrdi) {
 
 	int nbStations = nbStationsMin;
 	bool affiche = false;
@@ -16,7 +16,7 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 
 	while (nbStations <= nbStationsMax) {
 		
-		int xn = x0;
+		unsigned long int xn = x0;
 		int iCouts = nbStations - nbStationsMin;
 		Client* pDebutFile = NULL;
 		Couts coutsNbStation = {0};
@@ -41,7 +41,7 @@ int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int 
 			}
 
 			
-			xn = majStation(pDebutStation, &pDebutFile, xn, a, c, m, &coutsNbStation);
+			xn = majStation(pDebutStation, &pDebutFile, xn, a, c, m, &coutsNbStation, affiche);
 
 
 			majFile(pDebutFile);

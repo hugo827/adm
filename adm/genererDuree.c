@@ -1,9 +1,9 @@
 #include "Header.h"
 
 
-int genererDuree(int* xn, int a,int c, int m) {
+int genererDuree(unsigned long int* xn, unsigned long int a, unsigned long int c, unsigned long int m) {
 	int duree;
-	int xTemp;
+	unsigned long int xTemp;
 	xTemp = nombreAleatoire(m, a, c, *xn);
 
 	double u1 = ((double)(xTemp) /(double)m);

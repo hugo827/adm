@@ -1,8 +1,8 @@
 #include "Header.h"
 
 
-int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile, double paramPrior, double paramOrdi, bool affiche) {
-	
+int genererArrivees(unsigned long int a, unsigned long int c, unsigned long int m, unsigned long int xn, Client** pDebutFile, double paramPrior, double paramOrdi, bool affiche) {
+
 
 	int nbArriveesPrioritaire = arriveePrioritaire(paramPrior, a, c, m, &xn);
 
@@ -13,7 +13,7 @@ int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile, double par
 	if (nbArriveesPrioritaire != 0) {
 		while (iP < nbArriveesPrioritaire) {
 			// ressortir nbr aleatoire pour definir si prior absolue (30%) ou relatif
-			int xnTemp = nombreAleatoire(m, a, c, xn);
+			unsigned long int xnTemp = nombreAleatoire(m, a, c, xn);
 			xn = xnTemp;
 			char statut;
 			double U1 =  (double)((double)xn / (double)m);

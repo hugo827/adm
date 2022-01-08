@@ -48,7 +48,7 @@ struct change {
 #define EXIT_SUCCES 0
 
 
-int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, int a, int c, int m, int x0, double paramPrior, double paramOrdi );
+int nbStationsOptimal(int nbStationsMin, int nbStationsMax, int tempsSimul, unsigned long int a, unsigned long int c, unsigned long int m, unsigned long int x0, double paramPrior, double paramOrdi );
 
 void initCouts(Couts couts[], int length);
 
@@ -60,9 +60,9 @@ double calculEnFonctionTemps(int coutsParHeure, int temps);
 
 void calculCoutsClientAFinis(Couts* couts, Client* pPart);
 
-int genererDuree(int* xn, int a, int c, int m);
+int genererDuree(unsigned long int* xn, unsigned long int a, unsigned long int c, unsigned long int m);
 
-int nombreAleatoire(int m, int a, int c,int xn);
+int nombreAleatoire(unsigned long int m, unsigned long int a, unsigned long int c, unsigned long int xn);
 
 double loiPoisson(double param, int k);
 
@@ -76,15 +76,15 @@ Station* initStations(int nbStation);
 
 void majFile(Client* pDebutClient);
 
-int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c, int m, Couts* couts); 
+int majStation(Station* pDebutStation, Client** pDebutFile, unsigned long int xn, unsigned long int a, unsigned long int c, unsigned long int m, Couts* couts, bool affiche);
 
 void libClient(Station* pStation, Couts* couts);
 
-int genererArrivees(int a, int c, int m, int xn, Client** pDebutFile, double paramPrior, double paramOrdi, bool affiche);
+int genererArrivees(unsigned long int a, unsigned long int c, unsigned long int m, unsigned long  int xn, Client** pDebutFile, double paramPrior, double paramOrdi, bool affiche);
 
-int arriveePrioritaire(double paramPrior, int a, int c, int m, int* xn);
+int arriveePrioritaire(double paramPrior, unsigned long int a, unsigned long int c, unsigned long int m, unsigned long int* xn);
 
-int arriveeOrdinaire(double paramOrd, int a, int c, int m, int* xn);
+int arriveeOrdinaire(double paramOrd, unsigned long int a, unsigned long int c, unsigned long int m, unsigned long int* xn);
 
 Client* ajouterClientFile(char statut, Client** pDebutFile);
 

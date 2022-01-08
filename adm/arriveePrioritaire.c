@@ -1,15 +1,16 @@
 #include "Header.h"
 
 
-int arriveePrioritaire(double paramPrior, int a, int c, int m, int* xn) {
+int arriveePrioritaire(double paramPrior, unsigned long int a, unsigned long int c, unsigned long int m, unsigned long int* xn) {
 	
-	int xTemps = *xn;
+	unsigned long int xTemps = *xn;
 
-	int temp = nombreAleatoire(a, c, m, xTemps);
+	unsigned long int temp = nombreAleatoire(a, c, m, xTemps);
 
 	*xn = temp;
-	double U1 = ((double)(temp) / (double)m);
-
+	double U1 = 0;
+	U1 = ((double)(temp) / (double)m);
+	
 	int nbArrivéesP= 0;
 
 	double p0 = loiPoisson(paramPrior, 0);
@@ -18,7 +19,7 @@ int arriveePrioritaire(double paramPrior, int a, int c, int m, int* xn) {
 	double p3 = loiPoisson(paramPrior, 3);
 
 	double pTotal = p0;
-	
+	//printf("xn = %d -- un = %.5lf -- m = %d -- p0 = %.4lf -- p1 = %.4lf \n", temp, U1, m, p0,p1);
 	if (U1 < pTotal)
 	{
 		nbArrivéesP = 0;

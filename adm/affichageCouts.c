@@ -27,7 +27,7 @@ void affichageCouts(int nbStationsMin, int nbStationsMax, Couts couts[]) {
 				"\n\t - Station prioritaire : %.2lf" 
 				"\n\t - Systeme ordinaire : %.2lf"  
 				"\n\t - System prioritaire : %.2lf" 
-				"\n\t - Station inoccupée : %.2lf"
+				"\n\t - Station inoccupee : %.2lf"
 				"\n\t => Couts Total : %.2lf\n"
 			"", (nbStationsMin + iCouts), couts[iCouts].coutsDepartsOrdinaire, couts[iCouts].coutsDepartsPrioritaire, couts[iCouts].coutsStationOrdinaire,
 			couts[iCouts].coutsStationsPrioritaire, couts[iCouts].coutsSystemOrdinaire, couts[iCouts].coutsSystemPrioritaire, couts[iCouts].coutsStationsInoccupee, couts[iCouts].coutsTotal);

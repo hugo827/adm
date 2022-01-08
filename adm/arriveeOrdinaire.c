@@ -1,16 +1,18 @@
 #include "Header.h"
 
 
-int arriveeOrdinaire(double paramOrd, int a, int c, int m, int* xn) {
+int arriveeOrdinaire(double paramOrd, unsigned long int a, unsigned long int c, unsigned long int m, unsigned long int* xn) {
 
 	int nbArriveesO = 0;
-	int xTemps = *xn;
+	unsigned long int xTemps = *xn;
 
 	xTemps = nombreAleatoire(a, c, m, *xn);
-	
-
-	double U1 = ((double)(xTemps) / (double)m);
 	*xn = xTemps;
+	double convertirXN = (double)xTemps;
+	double convertirM = (double)m;
+
+	double U1 = (convertirXN / convertirM);
+	
 
 	
 	//calculer les proba pour chaque nbr d'arrivées
@@ -21,7 +23,7 @@ int arriveeOrdinaire(double paramOrd, int a, int c, int m, int* xn) {
 	double p4 = loiPoisson(paramOrd, 4);
 	double p5 = loiPoisson(paramOrd, 5);
 
-
+	//printf("xn = %d -- un = %.5lf -- m = %d -- p0 = %.4lf -- p1 = %.4lf \n", xTemps, U1, m, p0, p1);
 	// initialiser premiere proba 
 	double pTotal = p0;
 	if (U1 < pTotal) {

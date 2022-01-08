@@ -1,7 +1,7 @@
 #include "Header.h"
 
 
-int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c, int m, Couts* couts) {
+int majStation(Station* pDebutStation, Client** pDebutFile, unsigned long int xn, unsigned long int a, unsigned long int c, unsigned long int m, Couts* couts, bool affiche) {
 
 	Station* pStation = pDebutStation;
 	Change* pDebutChangement = NULL; 
@@ -97,6 +97,9 @@ int majStation(Station* pDebutStation, Client** pDebutFile, int xn, int a, int c
 		if(pModification != NULL) {
 			// a voir 
 			pClient = pModification->pStation->pClient;
+			if (affiche) {
+				printf("\n ==> Ejection ordinaire (%c) par absolue en station\n", pClient->statut);
+			}
 			pClient->statut = 'C';
 			Client* pFile = *pDebutFile;
 			Client* pPrec = NULL;
